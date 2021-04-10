@@ -1,0 +1,32 @@
+base_dir: portality
+include:
+  - "*.py"
+  - "*.html"
+exclude:
+  - "*.pyc"
+  - "*.png"
+  - "*.gif"
+  - "*.jpg"
+  - "*.ico"
+  - "*.jpeg"
+exclude_dirs:
+  - static/crossref
+  - static/vendor
+  - static/js/vendors
+  - static/widget/fqw_dependencies
+  - migrate
+ignore_parse_errors:
+  - scripts/softwaremap.py
+delimiter: ~~
+types: /home/richard/Code/External/doaj3/softwaremap/types.csv
+type_validation: error
+terminals: /home/richard/Code/External/doaj3/softwaremap/terminals.csv
+out_dir: /home/richard/tmp/doaj/featuremap
+serialisers:
+  - class: featuremap.jsonserialiser.JSONSerialiser
+    dir: json
+  - class: featuremap.csvserialiser.CSVSerialiser
+    dir: csv
+  - class: featuremap.htmlserialiser.HTMLSerialiser
+    dir: html
+    template: /home/richard/Code/External/featuremap/featuremap/templates/featuremap.html
