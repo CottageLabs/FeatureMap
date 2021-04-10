@@ -1,0 +1,31 @@
+base_dir: .
+include:
+  - "*.py"
+  - "*.html"
+  - "*.md"
+exclude:
+  - "*.pyc"
+  - "*.png"
+  - "*.gif"
+  - "*.jpg"
+  - "*.ico"
+  - "*.jpeg"
+  - README.md
+exclude_dirs:
+  - .featuremap
+  - example
+ignore_parse_errors:
+  - noop
+delimiter: ~~
+types: .featuremap/types.csv
+type_validation: error
+terminals: .featuremap/terminals.csv
+out_dir: .featuremap/map
+serialisers:
+  - class: featuremap.jsonserialiser.JSONSerialiser
+    dir: json
+  - class: featuremap.csvserialiser.CSVSerialiser
+    dir: csv
+  - class: featuremap.htmlserialiser.HTMLSerialiser
+    dir: html
+    template: featuremap/templates/featuremap.html

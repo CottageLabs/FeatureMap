@@ -10,6 +10,14 @@ from featuremap import plugin
 
 
 def parse_tree(config, analysis):
+    """
+    ~~ParseTree:Core~~
+    :param config:
+    :param analysis:
+    :return:
+    """
+
+    # ~~-> Config:Config~~
     directory = config.get("base_dir")
     exclude_dirs = config.get("exclude_dirs", [])
     exclude_files = config.get("exclude", [])
@@ -41,11 +49,21 @@ def parse_tree(config, analysis):
             if not match:
                 continue
 
+            # ~~->ParseFile:Core ~~
             path = os.path.join(root, name)
             parse_file(config, path, analysis)
 
 
 def parse_file(config, file, analysis):
+    """
+    ~~ParseFile:Core~~
+    :param config:
+    :param file:
+    :param analysis:
+    :return:
+    """
+
+    # ~~-> Config:Config~~
     valid_types = config.get("valid_types", [])
     type_validation = config.get("type_validation", "none")
     ignore_parse_errors = file in [os.path.join(config.get("base_dir"), x) for x in config.get("ignore_parse_errors", [])]
@@ -53,6 +71,7 @@ def parse_file(config, file, analysis):
     delimiter = config.get("delimiter", "~~")
     rx = delimiter + "(.+)" + delimiter
 
+    # ~~->Analysis:Model~~
     analysis.add_file(file)
     with open(file, "r") as f:
         context = False
@@ -68,6 +87,7 @@ def parse_file(config, file, analysis):
                         analysis.annotation_hit(file)
 
                         try:
+                            # ~~-> ParseReference:Core ~~
                             ref = parse_reference(annotation)
                         except MapException as e:
                             if ignore_parse_errors:
@@ -81,6 +101,7 @@ def parse_file(config, file, analysis):
                                 context = ref["context"]
 
                                 try:
+                                    # ~~-> ValidateEntity:Core~~
                                     validate_entity(context, valid_types, type_validation)
                                 except MapException as e:
                                     e.file = f.name
@@ -108,6 +129,13 @@ def parse_file(config, file, analysis):
 
 
 def validate_entity(entity, valid_types, type_validation):
+    """
+    ~~ValidateEntity:Core~~
+    :param entity:
+    :param valid_types:
+    :param type_validation:
+    :return:
+    """
     if type_validation == "none":
         return True
     type = entity.split(":")[1]
@@ -118,7 +146,13 @@ def validate_entity(entity, valid_types, type_validation):
 
 
 def parse_reference(text):
+    """
+    ~~ParseReference:Core~~
+    :param text:
+    :return:
+    """
     try:
+        #~~->Parser:Lex~~
         tree = parser.parse(text.strip())
     except:
         raise MapException("Unable to parse text '{x}'".format(x=text))
@@ -140,11 +174,18 @@ def parse_reference(text):
 
 
 def run(config):
+    """
+    ~~Runner:Core~~
+    :param config:
+    :return:
+    """
 
+    # ~~->Config:Config~~
     type_source = config.get("types")
     terminals_source = config.get("terminals")
 
     try:
+        # ~~->Types:Config~~
         valid_types = []
         if type_source is not None:
             with open(type_source, "r", encoding="utf-8") as f:
@@ -152,17 +193,21 @@ def run(config):
                 valid_types = [row[0] for row in reader]
         config["valid_types"] = valid_types
 
+        # ~~->Terminals:Config~~
         terminal_entities = []
         if terminals_source is not None:
             with open(terminals_source, "r", encoding="utf-8") as f:
                 reader = csv.reader(f)
                 terminal_entities = [row[0] for row in reader]
 
+        # ~~->Analysis:Model~~
         data = Analysis()
         data.terminals = terminal_entities
 
+        # ~~->ParseTree:Core~~
         parse_tree(config, data)
 
+        # ~~->Serialisers:Serialisers~~
         serialisers = config.get("serialisers", [])
         for serialiser in serialisers:
             klazz = plugin.load_class(serialiser.get("class"))

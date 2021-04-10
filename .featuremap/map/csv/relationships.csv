@@ -1,0 +1,14 @@
+CLI:Entrypoint,->,Runner:Core,./featuremap/cli.py#L19
+ParseTree:Core,->,Config:Config,./featuremap/core.py#L20
+ParseTree:Core,->,ParseFile:Core,./featuremap/core.py#L52
+ParseFile:Core,->,Config:Config,./featuremap/core.py#L66
+ParseFile:Core,->,Analysis:Model,./featuremap/core.py#L74
+ParseFile:Core,->,ParseReference:Core,./featuremap/core.py#L90
+ParseFile:Core,->,ValidateEntity:Core,./featuremap/core.py#L104
+ParseReference:Core,->,Parser:Lex,./featuremap/core.py#L155
+Runner:Core,->,Config:Config,./featuremap/core.py#L183
+Runner:Core,->,Types:Config,./featuremap/core.py#L188
+Runner:Core,->,Terminals:Config,./featuremap/core.py#L196
+Runner:Core,->,Analysis:Model,./featuremap/core.py#L203
+Runner:Core,->,ParseTree:Core,./featuremap/core.py#L207
+Runner:Core,->,Serialisers:Serialisers,./featuremap/core.py#L210

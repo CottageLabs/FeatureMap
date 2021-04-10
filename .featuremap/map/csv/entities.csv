@@ -1,0 +1,7 @@
+CLI:Entrypoint,./featuremap/cli.py#L8
+ParseTree:Core,./featuremap/core.py#L14
+ParseFile:Core,./featuremap/core.py#L59
+ValidateEntity:Core,./featuremap/core.py#L133
+ParseReference:Core,./featuremap/core.py#L150
+Runner:Core,./featuremap/core.py#L178
+Relationships:Template,./featuremap/templates/featuremap.html#L1

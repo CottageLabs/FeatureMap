@@ -1,0 +1,221 @@
+{
+  "relations": {
+    "CLI:Entrypoint": {
+      "name": "CLI:Entrypoint",
+      "refs": {
+        "->": {
+          "Runner:Core": [
+            {
+              "file": "./featuremap/cli.py",
+              "line": 19
+            }
+          ]
+        }
+      },
+      "targets": [
+        "Runner:Core"
+      ]
+    },
+    "ParseTree:Core": {
+      "name": "ParseTree:Core",
+      "refs": {
+        "->": {
+          "Config:Config": [
+            {
+              "file": "./featuremap/core.py",
+              "line": 20
+            }
+          ],
+          "ParseFile:Core": [
+            {
+              "file": "./featuremap/core.py",
+              "line": 52
+            }
+          ]
+        }
+      },
+      "targets": [
+        "Config:Config",
+        "ParseFile:Core"
+      ]
+    },
+    "ParseFile:Core": {
+      "name": "ParseFile:Core",
+      "refs": {
+        "->": {
+          "Config:Config": [
+            {
+              "file": "./featuremap/core.py",
+              "line": 66
+            }
+          ],
+          "Analysis:Model": [
+            {
+              "file": "./featuremap/core.py",
+              "line": 74
+            }
+          ],
+          "ParseReference:Core": [
+            {
+              "file": "./featuremap/core.py",
+              "line": 90
+            }
+          ],
+          "ValidateEntity:Core": [
+            {
+              "file": "./featuremap/core.py",
+              "line": 104
+            }
+          ]
+        }
+      },
+      "targets": [
+        "Config:Config",
+        "Analysis:Model",
+        "ParseReference:Core",
+        "ValidateEntity:Core"
+      ]
+    },
+    "ParseReference:Core": {
+      "name": "ParseReference:Core",
+      "refs": {
+        "->": {
+          "Parser:Lex": [
+            {
+              "file": "./featuremap/core.py",
+              "line": 155
+            }
+          ]
+        }
+      },
+      "targets": [
+        "Parser:Lex"
+      ]
+    },
+    "Runner:Core": {
+      "name": "Runner:Core",
+      "refs": {
+        "->": {
+          "Config:Config": [
+            {
+              "file": "./featuremap/core.py",
+              "line": 183
+            }
+          ],
+          "Types:Config": [
+            {
+              "file": "./featuremap/core.py",
+              "line": 188
+            }
+          ],
+          "Terminals:Config": [
+            {
+              "file": "./featuremap/core.py",
+              "line": 196
+            }
+          ],
+          "Analysis:Model": [
+            {
+              "file": "./featuremap/core.py",
+              "line": 203
+            }
+          ],
+          "ParseTree:Core": [
+            {
+              "file": "./featuremap/core.py",
+              "line": 207
+            }
+          ],
+          "Serialisers:Serialisers": [
+            {
+              "file": "./featuremap/core.py",
+              "line": 210
+            }
+          ]
+        }
+      },
+      "targets": [
+        "Config:Config",
+        "Types:Config",
+        "Terminals:Config",
+        "Analysis:Model",
+        "ParseTree:Core",
+        "Serialisers:Serialisers"
+      ]
+    }
+  },
+  "files": {
+    "./setup.py": 0,
+    "./featuremap/plugin.py": 0,
+    "./featuremap/models.py": 0,
+    "./featuremap/cli.py": 2,
+    "./featuremap/jsonserialiser.py": 0,
+    "./featuremap/htmlserialiser.py": 0,
+    "./featuremap/core.py": 18,
+    "./featuremap/lex.py": 0,
+    "./featuremap/exceptions.py": 0,
+    "./featuremap/__init__.py": 0,
+    "./featuremap/csvserialiser.py": 0,
+    "./featuremap/templates/featuremap.html": 1
+  },
+  "entities": {
+    "CLI:Entrypoint": [
+      {
+        "file": "./featuremap/cli.py",
+        "line": 8
+      }
+    ],
+    "ParseTree:Core": [
+      {
+        "file": "./featuremap/core.py",
+        "line": 14
+      }
+    ],
+    "ParseFile:Core": [
+      {
+        "file": "./featuremap/core.py",
+        "line": 59
+      }
+    ],
+    "ValidateEntity:Core": [
+      {
+        "file": "./featuremap/core.py",
+        "line": 133
+      }
+    ],
+    "ParseReference:Core": [
+      {
+        "file": "./featuremap/core.py",
+        "line": 150
+      }
+    ],
+    "Runner:Core": [
+      {
+        "file": "./featuremap/core.py",
+        "line": 178
+      }
+    ],
+    "Relationships:Template": [
+      {
+        "file": "./featuremap/templates/featuremap.html",
+        "line": 1
+      }
+    ]
+  },
+  "targets": [
+    "ValidateEntity:Core",
+    "ParseTree:Core",
+    "Config:Config",
+    "CLI:Entrypoint",
+    "Serialisers:Serialisers",
+    "Runner:Core",
+    "ParseFile:Core",
+    "Analysis:Model",
+    "Parser:Lex",
+    "Types:Config",
+    "ParseReference:Core",
+    "Relationships:Template",
+    "Terminals:Config"
+  ],
+  "terminals": []
+}
