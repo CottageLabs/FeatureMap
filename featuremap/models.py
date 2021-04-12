@@ -29,7 +29,13 @@ class Analysis(object):
 
     @property
     def no_downstreams(self):
-        return [t for t in self._targets if t not in self._relations and t not in self._terminals]
+        nods = []
+        for t in self._targets:
+            if t not in self._relations and t not in self._terminals:
+                ed = self.entity_definitions(t)
+                rd = self.inverse_relation_definitions(t)
+                nods.append((t, ed, rd))
+        return nods
 
     @property
     def unexpected_downstreams(self):
@@ -64,6 +70,15 @@ class Analysis(object):
                     triples += r.triples_for(s)
 
         return triples
+
+    def inverse_relation_definitions(self, entity_name):
+        irds = []
+        for entity, definition in self.relations.items():
+            if entity_name in definition.targets:
+                for ref, entries in definition.refs.items():
+                    if entity_name in entries:
+                        irds += entries.get(entity_name)
+        return irds
 
     def entity_definitions(self, entity_name):
         return self._entities.get(entity_name, "")

@@ -157,7 +157,7 @@ def parse_reference(text):
     :return:
     """
     try:
-        #~~->Parser:Lex~~
+        #~~->Parser:Core~~
         tree = parser.parse(text.strip())
     except:
         #~~-> MapException:Exception ~~
@@ -213,7 +213,7 @@ def run(config):
         # ~~->ParseTree:Core~~
         parse_tree(config, data)
 
-        # ~~->Serialisers:Serialisers~~
+        # ~~->Serialiser:Serialiser~~
         serialisers = config.get("serialisers", [])
         for serialiser in serialisers:
             klazz = plugin.load_class(serialiser.get("class"))

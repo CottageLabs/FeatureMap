@@ -36,3 +36,4 @@ serialisers:
       relationships: relationships.html
       entities: entities.html
       files: files.html
+      no-downstream: no-downstream.html

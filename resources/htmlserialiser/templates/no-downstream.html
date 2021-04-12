@@ -1,0 +1,36 @@
+{# ~~NoDownstream:Page->Page:Page~~ #}
+{% extends "base.html" %}
+
+{% from "_macros.html" import file_refs %}
+
+{% block page_title %}No Downstream{% endblock %}
+
+{% block content %}
+    <h2>No Downstream</h2>
+    <table>
+        <thead>
+            <tr>
+                <td>Entity</td>
+                <td>Entity Definition</td>
+                <td>Relation Definition</td>
+            </tr>
+        </thead>
+    {%- for target, entity_defs, relation_defs in data.no_downstreams %}
+        <tr>
+            <td>
+                {{ target }}
+            </td>
+            <td>
+                {% if entity_defs %}
+                {{ file_refs(entity_defs, config) }}
+                {% endif %}
+            </td>
+            <td>
+                {% if relation_defs %}
+                {{ file_refs(relation_defs, config) }}
+                {% endif %}
+            </td>
+        </tr>
+    {% endfor -%}
+    </table>
+{% endblock %}

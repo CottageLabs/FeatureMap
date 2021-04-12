@@ -1,8 +1,8 @@
 Setup:Core,./setup.py#L4,https://github.com/CottageLabs/FeatureMap/tree/main/./setup.py#L4
 Plugin:Core,./featuremap/plugin.py#L2,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/plugin.py#L2
 Analysis:Model,./featuremap/models.py#L5,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/models.py#L5
-Relation:Model,./featuremap/models.py#L110,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/models.py#L110
-Serialiser:Serialiser,./featuremap/models.py#L172,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/models.py#L172
+Relation:Model,./featuremap/models.py#L125,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/models.py#L125
+Serialiser:Serialiser,./featuremap/models.py#L187,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/models.py#L187
 CLI:Entrypoint,./featuremap/cli.py#L8,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/cli.py#L8
 JSON:Serialiser,./featuremap/jsonserialiser.py#L8,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/jsonserialiser.py#L8
 HTML:Serialiser,./featuremap/htmlserialiser.py#L11,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/htmlserialiser.py#L11
@@ -14,7 +14,8 @@ Runner:Core,./featuremap/core.py#L184,https://github.com/CottageLabs/FeatureMap/
 Parser:Core,./featuremap/lex.py#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/lex.py#L1
 MapException:Exception,./featuremap/exceptions.py#L3,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/exceptions.py#L3
 CSV:Serialiser,./featuremap/csvserialiser.py#L8,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/csvserialiser.py#L8
-Navigation:UIComponent,./resources/htmlserialiser/templates/_header.html#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/_header.html#L1
+NoDownstream:Page,./resources/htmlserialiser/templates/no-downstream.html#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/no-downstream.html#L1
+Header:UIComponent,./resources/htmlserialiser/templates/_header.html#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/_header.html#L1
 Footer:UIComponent,./resources/htmlserialiser/templates/_footer.html#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/_footer.html#L1
 JSIncludes:UIComponent,./resources/htmlserialiser/templates/_js_includes.html#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/_js_includes.html#L1
 Files:Page,./resources/htmlserialiser/templates/files.html#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/files.html#L1

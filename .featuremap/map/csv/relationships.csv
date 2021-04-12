@@ -1,6 +1,6 @@
 Setup:Core,->,CLI:Entrypoint,./setup.py#L19,https://github.com/CottageLabs/FeatureMap/tree/main/./setup.py#L19
-Analysis:Model,->,Relation:Model,./featuremap/models.py#L84,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/models.py#L84
-Relation:Model,->,Analysis:Model,./featuremap/models.py#L113,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/models.py#L113
+Analysis:Model,->,Relation:Model,./featuremap/models.py#L99,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/models.py#L99
+Relation:Model,->,Analysis:Model,./featuremap/models.py#L128,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/models.py#L128
 CLI:Entrypoint,->,Runner:Core,./featuremap/cli.py#L19,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/cli.py#L19
 JSON:Serialiser,->,Serialiser:Serialiser,./featuremap/jsonserialiser.py#L8,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/jsonserialiser.py#L8
 JSON:Serialiser,->,Analysis:Model,./featuremap/jsonserialiser.py#L9,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/jsonserialiser.py#L9
@@ -15,19 +15,21 @@ ParseFile:Core,->,ParseReference:Core,./featuremap/core.py#L90,https://github.co
 ParseFile:Core,->,MapException:Exception,./featuremap/core.py#L93; ./featuremap/core.py#L108; ./featuremap/core.py#L115; ./featuremap/core.py#L121,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L93; https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L108; https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L115; https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L121
 ParseFile:Core,->,ValidateEntity:Core,./featuremap/core.py#L105,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L105
 ValidateEntity:Core,->,MapException:Exception,./featuremap/core.py#L149,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L149
-ParseReference:Core,->,Parser:Lex,./featuremap/core.py#L160,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L160
+ParseReference:Core,->,Parser:Core,./featuremap/core.py#L160,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L160
 ParseReference:Core,->,MapException:Exception,./featuremap/core.py#L163,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L163
 Runner:Core,->,Config:Config,./featuremap/core.py#L189,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L189
 Runner:Core,->,Types:Config,./featuremap/core.py#L194,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L194
 Runner:Core,->,Terminals:Config,./featuremap/core.py#L202,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L202
 Runner:Core,->,Analysis:Model,./featuremap/core.py#L209,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L209
 Runner:Core,->,ParseTree:Core,./featuremap/core.py#L213,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L213
-Runner:Core,->,Serialisers:Serialisers,./featuremap/core.py#L216,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L216
+Runner:Core,->,Serialiser:Serialiser,./featuremap/core.py#L216,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L216
 Runner:Core,->,MapException:Exception,./featuremap/core.py#L224,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L224
 Parser:Core,->,Lark:Tech,./featuremap/lex.py#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/lex.py#L1
 CSV:Serialiser,->,Serialiser:Serialiser,./featuremap/csvserialiser.py#L8,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/csvserialiser.py#L8
 CSV:Serialiser,->,Analysis:Model,./featuremap/csvserialiser.py#L9,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/csvserialiser.py#L9
 CSV:Serialiser,->,Config:Config,./featuremap/csvserialiser.py#L10,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/csvserialiser.py#L10
+NoDownstream:Page,->,Page:Page,./resources/htmlserialiser/templates/no-downstream.html#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/no-downstream.html#L1
+Header:UIComponent,->,Navigation:UIComponent,./resources/htmlserialiser/templates/_header.html#L7,https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/_header.html#L7
 Files:Page,->,Page:Page,./resources/htmlserialiser/templates/files.html#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/files.html#L1
 Page:Page,->,Jinja2:Tech,./resources/htmlserialiser/templates/base.html#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/base.html#L1
 Page:Page,->,HTML:Serialiser,./resources/htmlserialiser/templates/base.html#L2,https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/base.html#L2
