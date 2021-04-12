@@ -9,7 +9,7 @@ File Path,Annotation Count
 ./featuremap/lex.py,0
 ./featuremap/exceptions.py,1
 ./featuremap/__init__.py,0
-./featuremap/csvserialiser.py,2
+./featuremap/csvserialiser.py,3
 ./featuremap/templates/_header.html,1
 ./featuremap/templates/_footer.html,0
 ./featuremap/templates/_js_includes.html,0

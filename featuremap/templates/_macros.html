@@ -1,6 +1,13 @@
-{%- macro file_refs(refs) %}
-    {% for r in refs %}
-        {% if not loop.first %}; {% endif %}
+{%- macro file_refs(refs, config) %}
+    {% set source_url = config.get("source_url") %}
+    {%- for r in refs %}
+        {%- if not loop.first %}; {% endif -%}
+        {%- if source_url %}
+            <a href="{{ source_url }}/{{ r.file }}#L{{ r.line }}" target="_blank">
+        {% endif -%}
         {{ r.file }}#L{{ r.line }}
-    {% endfor %}
+        {%- if source_url %}
+            </a>
+        {% endif -%}
+    {% endfor -%}
 {% endmacro -%}

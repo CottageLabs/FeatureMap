@@ -16,14 +16,14 @@
             {% set ns.current_entity = triple[0] %}
 
             <h2><a name="{{ triple[0] }}"></a>{{ triple[0] }}</h2>
-            <p>{{ file_refs(data.entity_definitions(triple[0])) }}</p>
+            <p>{{ file_refs(data.entity_definitions(triple[0]), config) }}</p>
                 <table>
         {% endif -%}
 
             <tr>
                 <td>{{ triple[1] }}</td>
                 <td><a href="#{{ triple[2] }}">{{ triple[2] }}</a></td>
-                <td>{{ file_refs(triple[3]) }}</td>
+                <td>{{ file_refs(triple[3], config) }}</td>
             </tr>
 
         {%- if loop.last %}

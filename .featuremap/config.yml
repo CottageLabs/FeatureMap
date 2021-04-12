@@ -1,5 +1,6 @@
 project_name: "FeatureMap"
 base_dir: .
+source_url: https://github.com/CottageLabs/FeatureMap/tree/main
 include:
   - "*.py"
   - "*.html"

@@ -1,11 +1,11 @@
-Jinja2:Tech
-Config:Config
-MapException:Exception
+Terminals:Config
 Header:UIComponent
+Types:Config
 Footer:UIComponent
+MapException:Exception
+Config:Config
 Parser:Lex
+Analysis:Model
 Serialisers:Serialisers
 Navigation:UIComponent
-Analysis:Model
-Types:Config
-Terminals:Config
+Jinja2:Tech

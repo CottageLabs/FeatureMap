@@ -10,7 +10,7 @@
     {%- for k, v in data.entities.items() %}
         <tr>
             <td><a name="{{ k }}"></a>{{ k }}</td>
-            <td>{{ file_refs(v) }}</td>
+            <td>{{ file_refs(v, config) }}</td>
         </tr>
     {% endfor -%}
     </table>
