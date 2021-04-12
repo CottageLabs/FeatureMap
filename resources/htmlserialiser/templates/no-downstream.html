@@ -6,31 +6,33 @@
 {% block page_title %}No Downstream{% endblock %}
 
 {% block content %}
-    <h2>No Downstream</h2>
-    <table>
+    <h2 class="display-3 text-center">No Downstream</h2>
+    <table class="table table-striped table-hover">
         <thead>
             <tr>
-                <td>Entity</td>
-                <td>Entity Definition</td>
-                <td>Relation Definition</td>
+                <th scope="col">Entity</th>
+                <th scope="col">Entity Definition</th>
+                <th scope="col">Relation Definition</th>
             </tr>
         </thead>
-    {%- for target, entity_defs, relation_defs in data.no_downstreams %}
-        <tr>
-            <td>
-                {{ target }}
-            </td>
-            <td>
-                {% if entity_defs %}
-                {{ file_refs(entity_defs, config) }}
-                {% endif %}
-            </td>
-            <td>
-                {% if relation_defs %}
-                {{ file_refs(relation_defs, config) }}
-                {% endif %}
-            </td>
-        </tr>
-    {% endfor -%}
+        <tbody>
+        {%- for target, entity_defs, relation_defs in data.no_downstreams %}
+            <tr>
+                <td>
+                    {{ target }}
+                </td>
+                <td>
+                    {% if entity_defs %}
+                    {{ file_refs(entity_defs, config) }}
+                    {% endif %}
+                </td>
+                <td>
+                    {% if relation_defs %}
+                    {{ file_refs(relation_defs, config) }}
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor -%}
+        </tbody>
     </table>
 {% endblock %}
