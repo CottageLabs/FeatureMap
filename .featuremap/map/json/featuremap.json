@@ -342,6 +342,22 @@
         "Config:Config"
       ]
     },
+    "UnseenTerminals:Page": {
+      "name": "UnseenTerminals:Page",
+      "refs": {
+        "->": {
+          "Page:Page": [
+            {
+              "file": "./resources/htmlserialiser/templates/unseen-terminals.html",
+              "line": 1
+            }
+          ]
+        }
+      },
+      "targets": [
+        "Page:Page"
+      ]
+    },
     "NoDownstream:Page": {
       "name": "NoDownstream:Page",
       "refs": {
@@ -488,6 +504,7 @@
     "./featuremap/exceptions.py": 1,
     "./featuremap/__init__.py": 0,
     "./featuremap/csvserialiser.py": 3,
+    "./resources/htmlserialiser/templates/unseen-terminals.html": 1,
     "./resources/htmlserialiser/templates/no-downstream.html": 1,
     "./resources/htmlserialiser/templates/unexpected-downstream.html": 1,
     "./resources/htmlserialiser/templates/_header.html": 2,
@@ -596,6 +613,12 @@
         "line": 8
       }
     ],
+    "UnseenTerminals:Page": [
+      {
+        "file": "./resources/htmlserialiser/templates/unseen-terminals.html",
+        "line": 1
+      }
+    ],
     "NoDownstream:Page": [
       {
         "file": "./resources/htmlserialiser/templates/no-downstream.html",
@@ -652,37 +675,38 @@
     ]
   },
   "targets": [
-    "Types:Config",
-    "Plugin:Core",
-    "Lark:Tech",
-    "Jinja2:Tech",
-    "ParseTree:Core",
-    "Files:Page",
-    "ParseFile:Core",
-    "Relation:Model",
-    "Setup:Core",
-    "Analysis:Model",
-    "Terminals:Config",
-    "Parser:Core",
-    "Page:Page",
-    "JSON:Serialiser",
-    "Navigation:UIComponent",
-    "HTML:Serialiser",
-    "CLI:Entrypoint",
-    "UnexpectedDownstream:Page",
-    "Footer:UIComponent",
-    "Header:UIComponent",
-    "NoDownstream:Page",
-    "ParseReference:Core",
     "ValidateEntity:Core",
-    "MapException:Exception",
     "Runner:Core",
-    "Entities:Page",
-    "Relationships:Page",
+    "MapException:Exception",
     "Config:Config",
+    "Footer:UIComponent",
     "JSIncludes:UIComponent",
+    "Terminals:Config",
+    "HTML:Serialiser",
+    "Types:Config",
+    "Lark:Tech",
+    "CLI:Entrypoint",
+    "Relation:Model",
+    "Files:Page",
+    "Parser:Core",
+    "UnseenTerminals:Page",
     "Serialiser:Serialiser",
-    "CSV:Serialiser"
+    "Setup:Core",
+    "Plugin:Core",
+    "Analysis:Model",
+    "ParseTree:Core",
+    "UnexpectedDownstream:Page",
+    "Entities:Page",
+    "JSON:Serialiser",
+    "NoDownstream:Page",
+    "CSV:Serialiser",
+    "Jinja2:Tech",
+    "Navigation:UIComponent",
+    "Page:Page",
+    "Header:UIComponent",
+    "Relationships:Page",
+    "ParseReference:Core",
+    "ParseFile:Core"
   ],
   "terminals": [
     "MapException:Exception",

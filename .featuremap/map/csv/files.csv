@@ -10,6 +10,7 @@ File Path,Annotation Count
 ./featuremap/exceptions.py,1
 ./featuremap/__init__.py,0
 ./featuremap/csvserialiser.py,3
+./resources/htmlserialiser/templates/unseen-terminals.html,1
 ./resources/htmlserialiser/templates/no-downstream.html,1
 ./resources/htmlserialiser/templates/unexpected-downstream.html,1
 ./resources/htmlserialiser/templates/_header.html,2

@@ -38,3 +38,4 @@ serialisers:
       files: files.html
       no-downstream: no-downstream.html
       unexpected-downstream: unexpected-downstream.html
+      unseen-terminals: unseen-terminals.html
