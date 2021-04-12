@@ -56,7 +56,7 @@ Clone this repo:
 git clone git@github.com:CottageLabs/FeatureMap.git
 ```
 
-Install the library into your (virtual environment):
+Install the library into your (virtual) environment:
 
 ```
 pip install -r requirements.txt
