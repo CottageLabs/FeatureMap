@@ -80,9 +80,10 @@ docs/map/html/relationships.html
 
 1. **Entities**
 
-An entity is any **thing** which you identify in your source file.  By placing a name of an
-entity in a source file anywhere at all (or even in multiple plates), FeatureMapw will
-regiser that as an entity.  See below for how to identify an entity.
+An entity is any **thing**/**feature**/**behaviour** whatever, that you want to track,
+which you identify in your source file via annotation.  By placing a name of an
+entity in a source file anywhere at all (or even in multiple platcs), FeatureMap will
+register that as an entity.  See below for how to identify an entity.
 
 
 2. **Entity Names**
@@ -101,8 +102,8 @@ like (see next section for details).
 
 Therefore your entity might have a names like:
 
-* Homepage:Page - the homepage of your webapp, which is a kind of `Page`
-* Login:Feature - the login capability for your site, which is a kind of `Feature`
+* `Homepage:Page` - the homepage of your webapp, which is a kind of `Page`; you might put that in an HTML page or a page template
+* `Login:Feature` - the login capability for your site, which is a kind of `Feature`; you might put that in the HTML page and/or in the handler for logins
 
 3. **Entity Types**
 
@@ -139,17 +140,20 @@ FeatureMap allows you to insert 4 different types of annotation into your source
 
 1. **Identify an Entity**
 
-Inserting the name of an entity and its type (see below for more details), registers
-that the entity exists, and sets the current entity context until the end of the current
-file
+Inserting the name of an entity and its type registers
+that the entity exists, and sets the current **entity context** until the end of the current
+file, or until a new entity is defined.
 
 ```
 # ~~Homepage:Page~~
 ```
 
+This registers the `Homepage:Page` entity, and sets that as our context. Any context-free relationships declared
+beneath this line will be attached to this entity.
+
 2. **Assert a relationship from the current entity context to another entity**
 
-Inserting a relationship to another entity when you are in an entity context registers
+Inserting a relationship to another entity when have an active entity context registers
 a relationship from the current entity context to that other entity.  If the other entity
 has not already been registered, it will be registered at this point.
 
