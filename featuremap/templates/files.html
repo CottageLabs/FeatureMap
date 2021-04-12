@@ -1,0 +1,34 @@
+{# ~~Files:Page->Page:Page~~ #}
+{% extends "base.html" %}
+
+{% from "_macros.html" import file_refs %}
+
+{% block content %}
+    <h2>Files</h2>
+    {% set ns = namespace(current_entity=False) %}
+    <table>
+        <thead>
+            <tr>
+                <td>File</td>
+                <td>Annotation Count</td>
+            </tr>
+        </thead>
+        <tbody>
+    {%- for k, v in data.files.items() %}
+        {% set source_url = config.get("source_url") %}
+        <tr>
+            <td>
+                {%- if source_url %}
+                <a href="{{ source_url }}/{{ k }}" target="_blank">
+                {% endif -%}
+                {{ k }}
+                {%- if source_url %}
+                    </a>
+                {% endif %}
+            </td>
+            <td>{{ v }}</td>
+        </tr>
+    {% endfor -%}
+        </tbody>
+    </table>
+{% endblock %}

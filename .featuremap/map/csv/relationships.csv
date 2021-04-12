@@ -21,6 +21,7 @@ Runner:Core,->,Serialisers:Serialisers,./featuremap/core.py#L216,https://github.
 Runner:Core,->,MapException:Exception,./featuremap/core.py#L224,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L224
 CSV:Serialiser,->,Analysis:Model,./featuremap/csvserialiser.py#L9,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/csvserialiser.py#L9
 CSV:Serialiser,->,Config:Config,./featuremap/csvserialiser.py#L10,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/csvserialiser.py#L10
+Files:Page,->,Page:Page,./featuremap/templates/files.html#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/templates/files.html#L1
 Page:Page,->,Jinja2:Tech,./featuremap/templates/base.html#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/templates/base.html#L1
 Page:Page,->,HTML:Serialiser,./featuremap/templates/base.html#L2,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/templates/base.html#L2
 Page:Page,->,Header:UIComponent,./featuremap/templates/base.html#L12,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/templates/base.html#L12

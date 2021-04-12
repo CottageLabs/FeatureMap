@@ -257,6 +257,22 @@
         "Config:Config"
       ]
     },
+    "Files:Page": {
+      "name": "Files:Page",
+      "refs": {
+        "->": {
+          "Page:Page": [
+            {
+              "file": "./featuremap/templates/files.html",
+              "line": 1
+            }
+          ]
+        }
+      },
+      "targets": [
+        "Page:Page"
+      ]
+    },
     "Page:Page": {
       "name": "Page:Page",
       "refs": {
@@ -343,6 +359,7 @@
     "./featuremap/templates/_footer.html": 0,
     "./featuremap/templates/_js_includes.html": 0,
     "./featuremap/templates/_macros.html": 0,
+    "./featuremap/templates/files.html": 1,
     "./featuremap/templates/base.html": 4,
     "./featuremap/templates/entities.html": 1,
     "./featuremap/templates/relationships.html": 1
@@ -414,6 +431,12 @@
         "line": 1
       }
     ],
+    "Files:Page": [
+      {
+        "file": "./featuremap/templates/files.html",
+        "line": 1
+      }
+    ],
     "Page:Page": [
       {
         "file": "./featuremap/templates/base.html",
@@ -434,29 +457,30 @@
     ]
   },
   "targets": [
-    "JSON:Serialiser",
-    "Relationships:Page",
-    "ParseTree:Core",
-    "CLI:Entrypoint",
-    "Terminals:Config",
-    "Header:UIComponent",
+    "HTML:Serialiser",
     "Types:Config",
+    "Page:Page",
+    "ParseReference:Core",
+    "Config:Config",
+    "JSON:Serialiser",
+    "Files:Page",
+    "ParseTree:Core",
+    "Serialisers:Serialisers",
+    "Terminals:Config",
+    "Analysis:Model",
+    "Parser:Lex",
+    "Jinja2:Tech",
     "Entities:Page",
-    "Footer:UIComponent",
-    "ParseFile:Core",
     "Runner:Core",
     "CSV:Serialiser",
-    "HTML:Serialiser",
+    "Footer:UIComponent",
     "MapException:Exception",
-    "Config:Config",
-    "ParseReference:Core",
-    "ValidateEntity:Core",
-    "Parser:Lex",
-    "Analysis:Model",
-    "Serialisers:Serialisers",
+    "Header:UIComponent",
     "Navigation:UIComponent",
-    "Page:Page",
-    "Jinja2:Tech"
+    "CLI:Entrypoint",
+    "ValidateEntity:Core",
+    "Relationships:Page",
+    "ParseFile:Core"
   ],
   "terminals": []
 }

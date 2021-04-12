@@ -35,3 +35,4 @@ serialisers:
     templates:
       relationships: relationships.html
       entities: entities.html
+      files: files.html

@@ -14,6 +14,7 @@ File Path,Annotation Count
 ./featuremap/templates/_footer.html,0
 ./featuremap/templates/_js_includes.html,0
 ./featuremap/templates/_macros.html,0
+./featuremap/templates/files.html,1
 ./featuremap/templates/base.html,4
 ./featuremap/templates/entities.html,1
 ./featuremap/templates/relationships.html,1
