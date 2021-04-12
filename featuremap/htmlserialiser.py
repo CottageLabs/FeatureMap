@@ -7,6 +7,11 @@ from jinja2 import FileSystemLoader
 
 
 class HTMLSerialiser(Serialiser):
+    """
+    ~~HTML:Serialiser~~
+    ~~-> Analysis:Model ~~
+    ~~-> Jinja2:Tech ~~
+    """
 
     def serialise(self, data):
         container = self.create_my_directory()

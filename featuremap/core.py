@@ -90,6 +90,7 @@ def parse_file(config, file, analysis):
                             # ~~-> ParseReference:Core ~~
                             ref = parse_reference(annotation)
                         except MapException as e:
+                            # ~~-> MapException:Exception ~~
                             if ignore_parse_errors:
                                 continue
                             e.file = f.name
@@ -104,17 +105,20 @@ def parse_file(config, file, analysis):
                                     # ~~-> ValidateEntity:Core~~
                                     validate_entity(context, valid_types, type_validation)
                                 except MapException as e:
+                                    # ~~-> MapException:Exception ~~
                                     e.file = f.name
                                     e.line = ln
                                     raise
 
                                 analysis.add_entity_definition(context, f.name, ln)
                             if not context:
+                                # ~~-> MapException:Exception ~~
                                 raise MapException("Context not set when annotation provided", f.name, ln)
                             if "rel" in ref:
                                 try:
                                     validate_entity(ref["target"], valid_types, type_validation)
                                 except MapException as e:
+                                    # ~~-> MapException:Exception ~~
                                     e.file = f.name
                                     e.line = ln
                                     raise
@@ -142,6 +146,7 @@ def validate_entity(entity, valid_types, type_validation):
     if type in valid_types:
         return True
     if type_validation == "error":
+        # ~~-> MapException:Exception ~~
         raise MapException("Type '{x}' is not an allowed type".format(x=type))
 
 
@@ -155,6 +160,7 @@ def parse_reference(text):
         #~~->Parser:Lex~~
         tree = parser.parse(text.strip())
     except:
+        #~~-> MapException:Exception ~~
         raise MapException("Unable to parse text '{x}'".format(x=text))
 
     resp = {}
@@ -215,4 +221,5 @@ def run(config):
             inst.serialise(data)
 
     except MapException as e:
+        # ~~-> MapException:Exception ~~
         print(str(e))

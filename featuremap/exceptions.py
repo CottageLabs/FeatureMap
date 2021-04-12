@@ -1,4 +1,7 @@
 class MapException(Exception):
+    """
+    ~~MapException:Exception~~
+    """
     def __init__(self, message, file=None, line=None):
         self.message = message
         self.file = file

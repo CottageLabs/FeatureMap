@@ -16,6 +16,45 @@
         "Runner:Core"
       ]
     },
+    "JSON:Serialiser": {
+      "name": "JSON:Serialiser",
+      "refs": {
+        "->": {
+          "Analysis:Model": [
+            {
+              "file": "./featuremap/jsonserialiser.py",
+              "line": 9
+            }
+          ]
+        }
+      },
+      "targets": [
+        "Analysis:Model"
+      ]
+    },
+    "HTML:Serialiser": {
+      "name": "HTML:Serialiser",
+      "refs": {
+        "->": {
+          "Analysis:Model": [
+            {
+              "file": "./featuremap/htmlserialiser.py",
+              "line": 12
+            }
+          ],
+          "Jinja2:Tech": [
+            {
+              "file": "./featuremap/htmlserialiser.py",
+              "line": 13
+            }
+          ]
+        }
+      },
+      "targets": [
+        "Analysis:Model",
+        "Jinja2:Tech"
+      ]
+    },
     "ParseTree:Core": {
       "name": "ParseTree:Core",
       "refs": {
@@ -61,10 +100,28 @@
               "line": 90
             }
           ],
+          "MapException:Exception": [
+            {
+              "file": "./featuremap/core.py",
+              "line": 93
+            },
+            {
+              "file": "./featuremap/core.py",
+              "line": 108
+            },
+            {
+              "file": "./featuremap/core.py",
+              "line": 115
+            },
+            {
+              "file": "./featuremap/core.py",
+              "line": 121
+            }
+          ],
           "ValidateEntity:Core": [
             {
               "file": "./featuremap/core.py",
-              "line": 104
+              "line": 105
             }
           ]
         }
@@ -73,7 +130,27 @@
         "Config:Config",
         "Analysis:Model",
         "ParseReference:Core",
-        "ValidateEntity:Core"
+        "MapException:Exception",
+        "ValidateEntity:Core",
+        "MapException:Exception",
+        "MapException:Exception",
+        "MapException:Exception"
+      ]
+    },
+    "ValidateEntity:Core": {
+      "name": "ValidateEntity:Core",
+      "refs": {
+        "->": {
+          "MapException:Exception": [
+            {
+              "file": "./featuremap/core.py",
+              "line": 149
+            }
+          ]
+        }
+      },
+      "targets": [
+        "MapException:Exception"
       ]
     },
     "ParseReference:Core": {
@@ -83,13 +160,20 @@
           "Parser:Lex": [
             {
               "file": "./featuremap/core.py",
-              "line": 155
+              "line": 160
+            }
+          ],
+          "MapException:Exception": [
+            {
+              "file": "./featuremap/core.py",
+              "line": 163
             }
           ]
         }
       },
       "targets": [
-        "Parser:Lex"
+        "Parser:Lex",
+        "MapException:Exception"
       ]
     },
     "Runner:Core": {
@@ -99,37 +183,43 @@
           "Config:Config": [
             {
               "file": "./featuremap/core.py",
-              "line": 183
+              "line": 189
             }
           ],
           "Types:Config": [
             {
               "file": "./featuremap/core.py",
-              "line": 188
+              "line": 194
             }
           ],
           "Terminals:Config": [
             {
               "file": "./featuremap/core.py",
-              "line": 196
+              "line": 202
             }
           ],
           "Analysis:Model": [
             {
               "file": "./featuremap/core.py",
-              "line": 203
+              "line": 209
             }
           ],
           "ParseTree:Core": [
             {
               "file": "./featuremap/core.py",
-              "line": 207
+              "line": 213
             }
           ],
           "Serialisers:Serialisers": [
             {
               "file": "./featuremap/core.py",
-              "line": 210
+              "line": 216
+            }
+          ],
+          "MapException:Exception": [
+            {
+              "file": "./featuremap/core.py",
+              "line": 224
             }
           ]
         }
@@ -140,7 +230,24 @@
         "Terminals:Config",
         "Analysis:Model",
         "ParseTree:Core",
-        "Serialisers:Serialisers"
+        "Serialisers:Serialisers",
+        "MapException:Exception"
+      ]
+    },
+    "CSV:Serialiser": {
+      "name": "CSV:Serialiser",
+      "refs": {
+        "->": {
+          "Analysis:Model": [
+            {
+              "file": "./featuremap/csvserialiser.py",
+              "line": 9
+            }
+          ]
+        }
+      },
+      "targets": [
+        "Analysis:Model"
       ]
     },
     "Page:Page": {
@@ -153,22 +260,29 @@
               "line": 1
             }
           ],
+          "HTML:Serialiser": [
+            {
+              "file": "./featuremap/templates/base.html",
+              "line": 2
+            }
+          ],
           "Header:UIComponent": [
             {
               "file": "./featuremap/templates/base.html",
-              "line": 11
+              "line": 12
             }
           ],
           "Footer:UIComponent": [
             {
               "file": "./featuremap/templates/base.html",
-              "line": 16
+              "line": 17
             }
           ]
         }
       },
       "targets": [
         "Jinja2:Tech",
+        "HTML:Serialiser",
         "Header:UIComponent",
         "Footer:UIComponent"
       ]
@@ -211,18 +325,18 @@
     "./featuremap/plugin.py": 0,
     "./featuremap/models.py": 0,
     "./featuremap/cli.py": 2,
-    "./featuremap/jsonserialiser.py": 0,
-    "./featuremap/htmlserialiser.py": 0,
-    "./featuremap/core.py": 18,
+    "./featuremap/jsonserialiser.py": 2,
+    "./featuremap/htmlserialiser.py": 3,
+    "./featuremap/core.py": 25,
     "./featuremap/lex.py": 0,
-    "./featuremap/exceptions.py": 0,
+    "./featuremap/exceptions.py": 1,
     "./featuremap/__init__.py": 0,
-    "./featuremap/csvserialiser.py": 0,
+    "./featuremap/csvserialiser.py": 2,
     "./featuremap/templates/_header.html": 1,
     "./featuremap/templates/_footer.html": 0,
     "./featuremap/templates/_js_includes.html": 0,
     "./featuremap/templates/_macros.html": 0,
-    "./featuremap/templates/base.html": 3,
+    "./featuremap/templates/base.html": 4,
     "./featuremap/templates/entities.html": 1,
     "./featuremap/templates/relationships.html": 1
   },
@@ -231,6 +345,18 @@
       {
         "file": "./featuremap/cli.py",
         "line": 8
+      }
+    ],
+    "JSON:Serialiser": [
+      {
+        "file": "./featuremap/jsonserialiser.py",
+        "line": 8
+      }
+    ],
+    "HTML:Serialiser": [
+      {
+        "file": "./featuremap/htmlserialiser.py",
+        "line": 11
       }
     ],
     "ParseTree:Core": [
@@ -248,19 +374,31 @@
     "ValidateEntity:Core": [
       {
         "file": "./featuremap/core.py",
-        "line": 133
+        "line": 137
       }
     ],
     "ParseReference:Core": [
       {
         "file": "./featuremap/core.py",
-        "line": 150
+        "line": 155
       }
     ],
     "Runner:Core": [
       {
         "file": "./featuremap/core.py",
-        "line": 178
+        "line": 184
+      }
+    ],
+    "MapException:Exception": [
+      {
+        "file": "./featuremap/exceptions.py",
+        "line": 3
+      }
+    ],
+    "CSV:Serialiser": [
+      {
+        "file": "./featuremap/csvserialiser.py",
+        "line": 8
       }
     ],
     "Navigation:UIComponent": [
@@ -289,25 +427,29 @@
     ]
   },
   "targets": [
-    "Types:Config",
-    "Analysis:Model",
-    "Relationships:Page",
-    "Parser:Lex",
-    "Terminals:Config",
     "ParseFile:Core",
-    "Config:Config",
-    "Page:Page",
-    "Serialisers:Serialisers",
     "Jinja2:Tech",
-    "Footer:UIComponent",
+    "Config:Config",
+    "MapException:Exception",
+    "Page:Page",
     "Entities:Page",
-    "ParseReference:Core",
-    "Navigation:UIComponent",
+    "Relationships:Page",
+    "ValidateEntity:Core",
+    "JSON:Serialiser",
     "Header:UIComponent",
-    "ParseTree:Core",
-    "Runner:Core",
+    "Footer:UIComponent",
+    "Parser:Lex",
+    "Serialisers:Serialisers",
+    "Navigation:UIComponent",
     "CLI:Entrypoint",
-    "ValidateEntity:Core"
+    "Analysis:Model",
+    "Types:Config",
+    "ParseReference:Core",
+    "Terminals:Config",
+    "CSV:Serialiser",
+    "HTML:Serialiser",
+    "ParseTree:Core",
+    "Runner:Core"
   ],
   "terminals": []
 }

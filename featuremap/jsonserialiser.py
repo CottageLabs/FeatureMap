@@ -4,6 +4,10 @@ import os
 from featuremap.models import Serialiser
 
 class JSONSerialiser(Serialiser):
+    """
+    ~~JSON:Serialiser~~
+    ~~-> Analysis:Model ~~
+    """
 
     def serialise(self, data):
         j = json.dumps(data.as_dict(), indent=2)

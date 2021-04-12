@@ -4,7 +4,10 @@ import csv
 from featuremap.models import Serialiser
 
 class CSVSerialiser(Serialiser):
-
+    """
+    ~~CSV:Serialiser~~
+    ~~-> Analysis:Model ~~
+    """
     def serialise(self, data):
 
         container = self.create_my_directory()
