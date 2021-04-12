@@ -16,9 +16,70 @@ across all document types, irrespective of language, and irrespective of whether
 are code files at all.  Provided the file is plain text, and in the case of a code file
 has some form of comment syntax, then FeatureMap can be used.  This allows it to 
 provide a view across all source files of all different languages, as well as bringing
-in documentation, deployment scripts, etc.
+in documentation, deployment scripts, configuration, etc.
 
-## How
+## Quick Start
+
+
+
+## Key concepts
+
+1. **Entities**
+
+An entity is any **thing** which you identify in your source file.  By placing a name of an
+entity in a source file anywhere at all (or even in multiple plates), FeatureMapw will
+regiser that as an entity.  See below for how to identify an entity.
+
+
+2. **Entity Names**
+
+An entity is named in a well defined way:
+
+```
+[name]:[type]
+```
+
+Here the `[name]` is absolutely any string you like, provided it does not contain any spaces and
+does not contain the character `:`.
+
+The `[type]` is a reference to the type of entity.  You can also make these up yourself as you
+like (see next section for details).
+
+Therefore your entity might have a names like:
+
+* Homepage:Page - the homepage of your webapp, which is a kind of `Page`
+* Login:Feature - the login capability for your site, which is a kind of `Feature`
+
+3. **Entity Types**
+
+As described above, entities must have a type.  You are free to invent whichever types 
+work for your project.  If you wish you can register the types in the `.featuremap/types.csv`
+file.  If you do that, and set FeatureMap to validate types, it will check that any
+types it finds are registered.  This allows you to enforce a certain vocabulary and
+ensures you are aware of any new types that creep into your annotations.
+
+4. **Relationships**
+
+Entities may be related to other entities.  This is done by specifying a relationship.
+
+You can create whatever relationships you like.  FeatureMap also has a default special
+relationship which simply means X "is related in a non-specific way to" Y.  This is the
+`->` operator.  For example:
+
+* `Homepage:Page -> Page:Page` - the homepage is related to the concept of a generic page
+* `Login:Feature -> Logout:Feature` - the login feature is related in some way to the logout feature
+
+If you wish to type these relationships you can do that instead:
+
+* `Homepage:Page isA Page:Page` - the homepage is a kind of page
+* `Login:Feature activates Logout:Feature` - the login feature activates the logout feature
+
+Note that if you introduce your own relationship types you need to maintain them.  For many
+basic purposes, knowing that a relationship exists is sufficient, and developers can infer
+the relationship type from the code and their knowledge of the system.
+
+
+## How to annotate your source
 
 FeatureMap allows you to insert 4 different types of annotation into your source files:
 
