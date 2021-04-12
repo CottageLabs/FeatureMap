@@ -1,0 +1,17 @@
+{# ~~Entities:Page->Page:Page~~ #}
+{% extends "base.html" %}
+
+{% from "_macros.html" import file_refs %}
+
+{% block content %}
+    <h2>Entities</h2>
+    {% set ns = namespace(current_entity=False) %}
+    <table>
+    {%- for k, v in data.entities.items() %}
+        <tr>
+            <td><a name="{{ k }}"></a>{{ k }}</td>
+            <td>{{ file_refs(v) }}</td>
+        </tr>
+    {% endfor -%}
+    </table>
+{% endblock %}

@@ -1,3 +1,4 @@
+project_name: "FeatureMap"
 base_dir: .
 include:
   - "*.py"
@@ -28,4 +29,8 @@ serialisers:
     dir: csv
   - class: featuremap.htmlserialiser.HTMLSerialiser
     dir: html
-    template: featuremap/templates/featuremap.html
+    template_dirs:
+      - featuremap/templates
+    templates:
+      relationships: relationships.html
+      entities: entities.html

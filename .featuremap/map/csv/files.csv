@@ -10,4 +10,10 @@ File Path,Annotation Count
 ./featuremap/exceptions.py,0
 ./featuremap/__init__.py,0
 ./featuremap/csvserialiser.py,0
-./featuremap/templates/featuremap.html,1
+./featuremap/templates/_header.html,1
+./featuremap/templates/_footer.html,0
+./featuremap/templates/_js_includes.html,0
+./featuremap/templates/_macros.html,0
+./featuremap/templates/base.html,3
+./featuremap/templates/entities.html,1
+./featuremap/templates/relationships.html,1

@@ -1,0 +1,570 @@
+
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> - FeatureMap</title>
+
+    
+</head>
+<body>
+    
+    
+<header class="page-header">
+    <h1>FeatureMap for FeatureMap</h1>
+    <nav>
+        <ul>
+            <li><a href="/relationships.html">Relationships</a></li>
+            <li><a href="/entities.html">Entities</a></li>
+            <li><a href="/files.html">Files</a></li>
+            <li><a href="/no-downstream.html">No Downstream</a></li>
+            <li><a href="/unexpected-downstream.html">Unexpected Downstream</a></li>
+            <li><a href="/unseen-terminals.html">Unseen Terminals</a></li>
+        </ul>
+    </nav>
+</header>
+
+    
+    <h2>Relationships</h2>
+    
+
+            <h2><a name="Analysis:Model"></a>Analysis:Model</h2>
+            <p>
+    
+</p>
+                <table>
+        <tr>
+                <td><-</td>
+                <td><a href="#ParseFile:Core">ParseFile:Core</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L74
+    
+</td>
+            </tr><tr>
+                <td><-</td>
+                <td><a href="#Runner:Core">Runner:Core</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L203
+    
+</td>
+            </tr>
+                </table>
+            
+
+            <h2><a name="CLI:Entrypoint"></a>CLI:Entrypoint</h2>
+            <p>
+    
+        
+        ./featuremap/cli.py#L8
+    
+</p>
+                <table>
+        <tr>
+                <td>-></td>
+                <td><a href="#Runner:Core">Runner:Core</a></td>
+                <td>
+    
+        
+        ./featuremap/cli.py#L19
+    
+</td>
+            </tr>
+                </table>
+            
+
+            <h2><a name="Config:Config"></a>Config:Config</h2>
+            <p>
+    
+</p>
+                <table>
+        <tr>
+                <td><-</td>
+                <td><a href="#ParseTree:Core">ParseTree:Core</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L20
+    
+</td>
+            </tr><tr>
+                <td><-</td>
+                <td><a href="#ParseFile:Core">ParseFile:Core</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L66
+    
+</td>
+            </tr><tr>
+                <td><-</td>
+                <td><a href="#Runner:Core">Runner:Core</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L183
+    
+</td>
+            </tr>
+                </table>
+            
+
+            <h2><a name="Entities:Page"></a>Entities:Page</h2>
+            <p>
+    
+        
+        ./featuremap/templates/entities.html#L1
+    
+</p>
+                <table>
+        <tr>
+                <td>-></td>
+                <td><a href="#Page:Page">Page:Page</a></td>
+                <td>
+    
+        
+        ./featuremap/templates/entities.html#L1
+    
+</td>
+            </tr>
+                </table>
+            
+
+            <h2><a name="Footer:UIComponent"></a>Footer:UIComponent</h2>
+            <p>
+    
+</p>
+                <table>
+        <tr>
+                <td><-</td>
+                <td><a href="#Page:Page">Page:Page</a></td>
+                <td>
+    
+        
+        ./featuremap/templates/base.html#L16
+    
+</td>
+            </tr>
+                </table>
+            
+
+            <h2><a name="Header:UIComponent"></a>Header:UIComponent</h2>
+            <p>
+    
+</p>
+                <table>
+        <tr>
+                <td><-</td>
+                <td><a href="#Page:Page">Page:Page</a></td>
+                <td>
+    
+        
+        ./featuremap/templates/base.html#L11
+    
+</td>
+            </tr>
+                </table>
+            
+
+            <h2><a name="Jinja2:Tech"></a>Jinja2:Tech</h2>
+            <p>
+    
+</p>
+                <table>
+        <tr>
+                <td><-</td>
+                <td><a href="#Page:Page">Page:Page</a></td>
+                <td>
+    
+        
+        ./featuremap/templates/base.html#L1
+    
+</td>
+            </tr>
+                </table>
+            
+
+            <h2><a name="Page:Page"></a>Page:Page</h2>
+            <p>
+    
+        
+        ./featuremap/templates/base.html#L1
+    
+</p>
+                <table>
+        <tr>
+                <td>-></td>
+                <td><a href="#Footer:UIComponent">Footer:UIComponent</a></td>
+                <td>
+    
+        
+        ./featuremap/templates/base.html#L16
+    
+</td>
+            </tr><tr>
+                <td>-></td>
+                <td><a href="#Header:UIComponent">Header:UIComponent</a></td>
+                <td>
+    
+        
+        ./featuremap/templates/base.html#L11
+    
+</td>
+            </tr><tr>
+                <td>-></td>
+                <td><a href="#Jinja2:Tech">Jinja2:Tech</a></td>
+                <td>
+    
+        
+        ./featuremap/templates/base.html#L1
+    
+</td>
+            </tr><tr>
+                <td><-</td>
+                <td><a href="#Entities:Page">Entities:Page</a></td>
+                <td>
+    
+        
+        ./featuremap/templates/entities.html#L1
+    
+</td>
+            </tr><tr>
+                <td><-</td>
+                <td><a href="#Relationships:Page">Relationships:Page</a></td>
+                <td>
+    
+        
+        ./featuremap/templates/relationships.html#L1
+    
+</td>
+            </tr>
+                </table>
+            
+
+            <h2><a name="ParseFile:Core"></a>ParseFile:Core</h2>
+            <p>
+    
+        
+        ./featuremap/core.py#L59
+    
+</p>
+                <table>
+        <tr>
+                <td>-></td>
+                <td><a href="#Analysis:Model">Analysis:Model</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L74
+    
+</td>
+            </tr><tr>
+                <td>-></td>
+                <td><a href="#Config:Config">Config:Config</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L66
+    
+</td>
+            </tr><tr>
+                <td>-></td>
+                <td><a href="#ParseReference:Core">ParseReference:Core</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L90
+    
+</td>
+            </tr><tr>
+                <td>-></td>
+                <td><a href="#ValidateEntity:Core">ValidateEntity:Core</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L104
+    
+</td>
+            </tr><tr>
+                <td><-</td>
+                <td><a href="#ParseTree:Core">ParseTree:Core</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L52
+    
+</td>
+            </tr>
+                </table>
+            
+
+            <h2><a name="ParseReference:Core"></a>ParseReference:Core</h2>
+            <p>
+    
+        
+        ./featuremap/core.py#L150
+    
+</p>
+                <table>
+        <tr>
+                <td>-></td>
+                <td><a href="#Parser:Lex">Parser:Lex</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L155
+    
+</td>
+            </tr><tr>
+                <td><-</td>
+                <td><a href="#ParseFile:Core">ParseFile:Core</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L90
+    
+</td>
+            </tr>
+                </table>
+            
+
+            <h2><a name="ParseTree:Core"></a>ParseTree:Core</h2>
+            <p>
+    
+        
+        ./featuremap/core.py#L14
+    
+</p>
+                <table>
+        <tr>
+                <td>-></td>
+                <td><a href="#Config:Config">Config:Config</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L20
+    
+</td>
+            </tr><tr>
+                <td>-></td>
+                <td><a href="#ParseFile:Core">ParseFile:Core</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L52
+    
+</td>
+            </tr><tr>
+                <td><-</td>
+                <td><a href="#Runner:Core">Runner:Core</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L207
+    
+</td>
+            </tr>
+                </table>
+            
+
+            <h2><a name="Parser:Lex"></a>Parser:Lex</h2>
+            <p>
+    
+</p>
+                <table>
+        <tr>
+                <td><-</td>
+                <td><a href="#ParseReference:Core">ParseReference:Core</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L155
+    
+</td>
+            </tr>
+                </table>
+            
+
+            <h2><a name="Relationships:Page"></a>Relationships:Page</h2>
+            <p>
+    
+        
+        ./featuremap/templates/relationships.html#L1
+    
+</p>
+                <table>
+        <tr>
+                <td>-></td>
+                <td><a href="#Page:Page">Page:Page</a></td>
+                <td>
+    
+        
+        ./featuremap/templates/relationships.html#L1
+    
+</td>
+            </tr>
+                </table>
+            
+
+            <h2><a name="Runner:Core"></a>Runner:Core</h2>
+            <p>
+    
+        
+        ./featuremap/core.py#L178
+    
+</p>
+                <table>
+        <tr>
+                <td>-></td>
+                <td><a href="#Analysis:Model">Analysis:Model</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L203
+    
+</td>
+            </tr><tr>
+                <td>-></td>
+                <td><a href="#Config:Config">Config:Config</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L183
+    
+</td>
+            </tr><tr>
+                <td>-></td>
+                <td><a href="#ParseTree:Core">ParseTree:Core</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L207
+    
+</td>
+            </tr><tr>
+                <td>-></td>
+                <td><a href="#Serialisers:Serialisers">Serialisers:Serialisers</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L210
+    
+</td>
+            </tr><tr>
+                <td>-></td>
+                <td><a href="#Terminals:Config">Terminals:Config</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L196
+    
+</td>
+            </tr><tr>
+                <td>-></td>
+                <td><a href="#Types:Config">Types:Config</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L188
+    
+</td>
+            </tr><tr>
+                <td><-</td>
+                <td><a href="#CLI:Entrypoint">CLI:Entrypoint</a></td>
+                <td>
+    
+        
+        ./featuremap/cli.py#L19
+    
+</td>
+            </tr>
+                </table>
+            
+
+            <h2><a name="Serialisers:Serialisers"></a>Serialisers:Serialisers</h2>
+            <p>
+    
+</p>
+                <table>
+        <tr>
+                <td><-</td>
+                <td><a href="#Runner:Core">Runner:Core</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L210
+    
+</td>
+            </tr>
+                </table>
+            
+
+            <h2><a name="Terminals:Config"></a>Terminals:Config</h2>
+            <p>
+    
+</p>
+                <table>
+        <tr>
+                <td><-</td>
+                <td><a href="#Runner:Core">Runner:Core</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L196
+    
+</td>
+            </tr>
+                </table>
+            
+
+            <h2><a name="Types:Config"></a>Types:Config</h2>
+            <p>
+    
+</p>
+                <table>
+        <tr>
+                <td><-</td>
+                <td><a href="#Runner:Core">Runner:Core</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L188
+    
+</td>
+            </tr>
+                </table>
+            
+
+            <h2><a name="ValidateEntity:Core"></a>ValidateEntity:Core</h2>
+            <p>
+    
+        
+        ./featuremap/core.py#L133
+    
+</p>
+                <table>
+        <tr>
+                <td><-</td>
+                <td><a href="#ParseFile:Core">ParseFile:Core</a></td>
+                <td>
+    
+        
+        ./featuremap/core.py#L104
+    
+</td>
+            </tr>
+            </table>
+        
+
+    
+    
+
+    
+
+    
+</body>
+</html>

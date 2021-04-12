@@ -1,8 +1,11 @@
-ValidateEntity:Core
-Config:Config
-Serialisers:Serialisers
+Types:Config
 Analysis:Model
 Parser:Lex
-Types:Config
-Relationships:Template
 Terminals:Config
+Config:Config
+Serialisers:Serialisers
+Jinja2:Tech
+Footer:UIComponent
+Navigation:UIComponent
+Header:UIComponent
+ValidateEntity:Core

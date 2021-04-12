@@ -1,0 +1,6 @@
+{%- macro file_refs(refs) %}
+    {% for r in refs %}
+        {% if not loop.first %}; {% endif %}
+        {{ r.file }}#L{{ r.line }}
+    {% endfor %}
+{% endmacro -%}

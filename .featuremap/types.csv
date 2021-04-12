@@ -1,7 +1,9 @@
 Entrypoint
 Core
-Template
 Model
 Config
 Serialisers
 Lex
+Tech
+Page
+UIComponent

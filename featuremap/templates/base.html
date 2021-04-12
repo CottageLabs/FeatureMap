@@ -1,0 +1,23 @@
+{# ~~Page:Page -> Jinja2:Tech~~ #}
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block page_title %}{% endblock %} - {{ config.get("project_name", "FeatureMap") }}</title>
+
+    {% block extra_stylesheets %}{% endblock %}
+</head>
+<body>
+    {# ~~-> Header:UIComponent~~ #}
+    {% include "_header.html" %}
+
+    {% block content %}{% endblock %}
+
+    {# ~~-> Footer:UIComponent~~ #}
+    {% include "_footer.html" %}
+
+    {% include '_js_includes.html' %}
+
+    {% block extra_js_bottom %}{% endblock extra_js_bottom %}
+</body>
+</html>

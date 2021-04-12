@@ -14,7 +14,7 @@ def main():
     args = parser.parse_args()
 
     with open(args.config, "r", encoding="utf-8") as f:
-        config = yaml.load(f.read())
+        config = yaml.load(f.read(), Loader=yaml.CLoader)
 
     # ~~->Runner:Core~~
     run(config)

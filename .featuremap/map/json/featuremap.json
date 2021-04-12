@@ -142,6 +142,68 @@
         "ParseTree:Core",
         "Serialisers:Serialisers"
       ]
+    },
+    "Page:Page": {
+      "name": "Page:Page",
+      "refs": {
+        "->": {
+          "Jinja2:Tech": [
+            {
+              "file": "./featuremap/templates/base.html",
+              "line": 1
+            }
+          ],
+          "Header:UIComponent": [
+            {
+              "file": "./featuremap/templates/base.html",
+              "line": 11
+            }
+          ],
+          "Footer:UIComponent": [
+            {
+              "file": "./featuremap/templates/base.html",
+              "line": 16
+            }
+          ]
+        }
+      },
+      "targets": [
+        "Jinja2:Tech",
+        "Header:UIComponent",
+        "Footer:UIComponent"
+      ]
+    },
+    "Entities:Page": {
+      "name": "Entities:Page",
+      "refs": {
+        "->": {
+          "Page:Page": [
+            {
+              "file": "./featuremap/templates/entities.html",
+              "line": 1
+            }
+          ]
+        }
+      },
+      "targets": [
+        "Page:Page"
+      ]
+    },
+    "Relationships:Page": {
+      "name": "Relationships:Page",
+      "refs": {
+        "->": {
+          "Page:Page": [
+            {
+              "file": "./featuremap/templates/relationships.html",
+              "line": 1
+            }
+          ]
+        }
+      },
+      "targets": [
+        "Page:Page"
+      ]
     }
   },
   "files": {
@@ -156,7 +218,13 @@
     "./featuremap/exceptions.py": 0,
     "./featuremap/__init__.py": 0,
     "./featuremap/csvserialiser.py": 0,
-    "./featuremap/templates/featuremap.html": 1
+    "./featuremap/templates/_header.html": 1,
+    "./featuremap/templates/_footer.html": 0,
+    "./featuremap/templates/_js_includes.html": 0,
+    "./featuremap/templates/_macros.html": 0,
+    "./featuremap/templates/base.html": 3,
+    "./featuremap/templates/entities.html": 1,
+    "./featuremap/templates/relationships.html": 1
   },
   "entities": {
     "CLI:Entrypoint": [
@@ -195,27 +263,51 @@
         "line": 178
       }
     ],
-    "Relationships:Template": [
+    "Navigation:UIComponent": [
       {
-        "file": "./featuremap/templates/featuremap.html",
+        "file": "./featuremap/templates/_header.html",
+        "line": 1
+      }
+    ],
+    "Page:Page": [
+      {
+        "file": "./featuremap/templates/base.html",
+        "line": 1
+      }
+    ],
+    "Entities:Page": [
+      {
+        "file": "./featuremap/templates/entities.html",
+        "line": 1
+      }
+    ],
+    "Relationships:Page": [
+      {
+        "file": "./featuremap/templates/relationships.html",
         "line": 1
       }
     ]
   },
   "targets": [
-    "ValidateEntity:Core",
-    "ParseTree:Core",
-    "Config:Config",
-    "CLI:Entrypoint",
-    "Serialisers:Serialisers",
-    "Runner:Core",
-    "ParseFile:Core",
-    "Analysis:Model",
-    "Parser:Lex",
     "Types:Config",
+    "Analysis:Model",
+    "Relationships:Page",
+    "Parser:Lex",
+    "Terminals:Config",
+    "ParseFile:Core",
+    "Config:Config",
+    "Page:Page",
+    "Serialisers:Serialisers",
+    "Jinja2:Tech",
+    "Footer:UIComponent",
+    "Entities:Page",
     "ParseReference:Core",
-    "Relationships:Template",
-    "Terminals:Config"
+    "Navigation:UIComponent",
+    "Header:UIComponent",
+    "ParseTree:Core",
+    "Runner:Core",
+    "CLI:Entrypoint",
+    "ValidateEntity:Core"
   ],
   "terminals": []
 }

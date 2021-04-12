@@ -3,22 +3,25 @@ import os
 from featuremap.models import Serialiser
 
 from jinja2 import Environment
+from jinja2 import FileSystemLoader
+
 
 class HTMLSerialiser(Serialiser):
 
     def serialise(self, data):
         container = self.create_my_directory()
-        html_template = self.my_config.get("template")
 
         env = Environment()
-        with open(html_template, "r", encoding="utf-8") as f:
-            template = env.from_string(f.read())
+        env.loader = FileSystemLoader(self.my_config.get("template_dirs", []))
+        env.globals["config"] = self.global_config
 
-        page = template.render(data=data)
+        for template_name, path in self.my_config.get("templates", {}).items():
+            template = env.get_template(path)
+            # with open(path, "r", encoding="utf-8") as f:
+            #     template = env.from_string(f.read())
 
-        outfile = os.path.join(container, "index.html")
-        outdir = os.path.dirname(outfile)
-        if not os.path.exists(outdir):
-            os.makedirs(outdir)
-        with open(outfile, "w", encoding="utf-8") as f:
-            f.write(page)
+            page = template.render(data=data)
+
+            outfile = os.path.join(container, template_name + ".html")
+            with open(outfile, "w", encoding="utf-8") as f:
+                f.write(page)

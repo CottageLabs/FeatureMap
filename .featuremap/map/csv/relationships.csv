@@ -12,3 +12,8 @@ Runner:Core,->,Terminals:Config,./featuremap/core.py#L196
 Runner:Core,->,Analysis:Model,./featuremap/core.py#L203
 Runner:Core,->,ParseTree:Core,./featuremap/core.py#L207
 Runner:Core,->,Serialisers:Serialisers,./featuremap/core.py#L210
+Page:Page,->,Jinja2:Tech,./featuremap/templates/base.html#L1
+Page:Page,->,Header:UIComponent,./featuremap/templates/base.html#L11
+Page:Page,->,Footer:UIComponent,./featuremap/templates/base.html#L16
+Entities:Page,->,Page:Page,./featuremap/templates/entities.html#L1
+Relationships:Page,->,Page:Page,./featuremap/templates/relationships.html#L1
