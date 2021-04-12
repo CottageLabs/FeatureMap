@@ -18,8 +18,9 @@ has some form of comment syntax, then FeatureMap can be used.  This allows it to
 provide a view across all source files of all different languages, as well as bringing
 in documentation, deployment scripts, configuration, etc.
 
+## Getting Started
 
-## Show me it
+### Show me it
 
 This repository is fully annotated using FeatureMap, so you can quickly see what the 
 annotations and the output of a FeatureMap report look like.
@@ -45,6 +46,35 @@ When FeatureMap is run against the code it will extract those to a report that a
 structure of your code:
 
 [See the FeatureMap's FeatureMap!](https://cottagelabs.github.io/FeatureMap/map/html/relationships.html)
+
+
+### Show me it on my machine
+
+Clone this repo:
+
+```
+git clone git@github.com:CottageLabs/FeatureMap.git
+```
+
+Install the library into your (virtual environment):
+
+```
+pip install -r requirements.txt
+```
+
+Go into the `FeatureMap` root directory and run:
+
+```
+featuremap -c .featuremap/config.yml
+```
+
+That will re-generate the FeatureMap into the `docs/map` directory.
+
+Open one of the report pages in your favourite browser.  You will find, for example, the relationships report here:
+
+```
+docs/map/html/relationships.html
+```
 
 ## Key concepts
 
