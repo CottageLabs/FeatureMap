@@ -1,0 +1,38 @@
+{# ~~UnexpectedDownstream:Page->Page:Page~~ #}
+{% extends "base.html" %}
+
+{% from "_macros.html" import file_refs %}
+
+{% block page_title %}Unexpected Downstream{% endblock %}
+
+{% block content %}
+    <h2 class="display-3 text-center">Unexpected Downstream</h2>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Entity</th>
+                <th scope="col">Entity Definition</th>
+                <th scope="col">Relation Definition</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%- for target, entity_defs, relation_defs in data.unexpected_downstreams %}
+                <tr>
+                    <td>
+                        {{ target }}
+                    </td>
+                    <td>
+                        {% if entity_defs %}
+                        {{ file_refs(entity_defs, config) }}
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if relation_defs %}
+                        {{ file_refs(relation_defs, config) }}
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor -%}
+        </tbody>
+    </table>
+{% endblock %}

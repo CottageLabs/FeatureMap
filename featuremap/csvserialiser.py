@@ -55,8 +55,18 @@ class CSVSerialiser(Serialiser):
         unexpected_downstram = os.path.join(container, "unexpected-downstream.csv")
         with open(unexpected_downstram, "w", encoding="utf-8") as o:
             writer = csv.writer(o)
-            for target in data.unexpected_downstreams:
-                writer.writerow([target])
+            for target, entity_defs, relation_defs in data.unexpected_downstreams:
+                if entity_defs:
+                    erefs, eurls = self._file_refs(entity_defs)
+                else:
+                    erefs, eurls = [], []
+
+                if relation_defs:
+                    rrefs, rurls = self._file_refs(relation_defs)
+                else:
+                    rrefs, rurls = [], []
+
+                writer.writerow([target, "; ".join(erefs), "; ".join(eurls), "; ".join(rrefs), "; ".join(rurls)])
 
         unseen_terminals = os.path.join(container, "unseen-terminals.csv")
         with open(unseen_terminals, "w", encoding="utf-8") as o:

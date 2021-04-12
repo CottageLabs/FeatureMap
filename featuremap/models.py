@@ -39,7 +39,8 @@ class Analysis(object):
 
     @property
     def unexpected_downstreams(self):
-        return [t for t in self._terminals if t in self._relations]
+        return [(t, self.entity_definitions(t). self.relations.get(t))
+                for t in self._terminals if t in self._relations]
 
     @property
     def unseen_terminals(self):

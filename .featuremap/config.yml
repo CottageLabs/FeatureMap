@@ -37,3 +37,4 @@ serialisers:
       entities: entities.html
       files: files.html
       no-downstream: no-downstream.html
+      unexpected-downstream: unexpected-downstream.html
