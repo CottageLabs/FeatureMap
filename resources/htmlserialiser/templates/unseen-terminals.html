@@ -17,6 +17,7 @@
             </tr>
         </thead>
         <tbody>
+            {%- if data.unseen_terminals %}
             {%- for target in data.unseen_terminals %}
                 <tr>
                     <td>
@@ -24,6 +25,11 @@
                     </td>
                 </tr>
             {% endfor -%}
+            {% else %}
+                <tr>
+                    <td>There are no entries in <code>{{ config.get("terminals") }}</code> which were not found in the source tree</td>
+                </tr>
+            {% endif -%}
         </tbody>
     </table>
 {% endblock %}

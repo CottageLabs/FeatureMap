@@ -16,6 +16,7 @@ exclude:
 exclude_dirs:
   - .featuremap
   - example
+  - docs/map
 ignore_parse_errors:
   - noop
 delimiter: ~~

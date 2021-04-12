@@ -7,6 +7,7 @@
 
 {% block content %}
     <h2 class="display-3 text-center">Unexpected Downstream</h2>
+    <p>The entities listed here have downstream relationships even though they are listed in <code>{{ config.get("terminals") }}</code></p>
     <table class="table table-striped table-hover">
         <thead>
             <tr>
@@ -16,6 +17,7 @@
             </tr>
         </thead>
         <tbody>
+            {%- if data.unexpected_downstreams %}
             {%- for target, entity_defs, relation_defs in data.unexpected_downstreams %}
                 <tr>
                     <td>
@@ -33,6 +35,13 @@
                     </td>
                 </tr>
             {% endfor -%}
+            {% else %}
+                <tr>
+                    <td colspan="3" class="text-center">
+                        There are no entities with unexpected downstream relationships.
+                    </td>
+                </tr>
+            {% endif %}
         </tbody>
     </table>
 {% endblock %}

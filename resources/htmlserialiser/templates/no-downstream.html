@@ -7,6 +7,10 @@
 
 {% block content %}
     <h2 class="display-3 text-center">No Downstream</h2>
+    <p>A list of any entity declared either explicitly or in a relationship which does not then have
+    other entities that it declares downstream relationships to.  This may indicate that an entity
+    is not yet fully documented, and needs further relationships defined.  If not, the entity may
+    be a terminal, in which case it can be registered in <code>{{ config.get("terminals") }}</code>.</p>
     <table class="table table-striped table-hover">
         <thead>
             <tr>
@@ -16,6 +20,7 @@
             </tr>
         </thead>
         <tbody>
+        {%- if data.no_downstreams %}
         {%- for target, entity_defs, relation_defs in data.no_downstreams %}
             <tr>
                 <td>
@@ -33,6 +38,12 @@
                 </td>
             </tr>
         {% endfor -%}
+        {% else %}
+            <tr>
+                <td colspan="3" class="text-center">There are no entities which have no downstream relationships which are
+                    not registered in <code>{{ config.get("terminals") }}</code></td>
+            </tr>
+        {% endif -%}
         </tbody>
     </table>
 {% endblock %}
