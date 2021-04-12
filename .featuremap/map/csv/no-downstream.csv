@@ -1,11 +1,11 @@
+Navigation:UIComponent
+Parser:Lex
+MapException:Exception
+Footer:UIComponent
+Terminals:Config
 Types:Config
+Header:UIComponent
 Config:Config
 Serialisers:Serialisers
-Terminals:Config
 Analysis:Model
-Parser:Lex
 Jinja2:Tech
-Footer:UIComponent
-MapException:Exception
-Header:UIComponent
-Navigation:UIComponent

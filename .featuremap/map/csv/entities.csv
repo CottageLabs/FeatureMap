@@ -8,8 +8,8 @@ ParseReference:Core,./featuremap/core.py#L155,https://github.com/CottageLabs/Fea
 Runner:Core,./featuremap/core.py#L184,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L184
 MapException:Exception,./featuremap/exceptions.py#L3,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/exceptions.py#L3
 CSV:Serialiser,./featuremap/csvserialiser.py#L8,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/csvserialiser.py#L8
-Navigation:UIComponent,./featuremap/templates/_header.html#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/templates/_header.html#L1
-Files:Page,./featuremap/templates/files.html#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/templates/files.html#L1
-Page:Page,./featuremap/templates/base.html#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/templates/base.html#L1
-Entities:Page,./featuremap/templates/entities.html#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/templates/entities.html#L1
-Relationships:Page,./featuremap/templates/relationships.html#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/templates/relationships.html#L1
+Navigation:UIComponent,./resources/htmlserialiser/templates/_header.html#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/_header.html#L1
+Files:Page,./resources/htmlserialiser/templates/files.html#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/files.html#L1
+Page:Page,./resources/htmlserialiser/templates/base.html#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/base.html#L1
+Entities:Page,./resources/htmlserialiser/templates/entities.html#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/entities.html#L1
+Relationships:Page,./resources/htmlserialiser/templates/relationships.html#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/relationships.html#L1
