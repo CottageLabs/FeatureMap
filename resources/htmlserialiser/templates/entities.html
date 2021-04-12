@@ -6,14 +6,22 @@
 {% block page_title %}Entities{% endblock %}
 
 {% block content %}
-    <h2>Entities</h2>
-    {% set ns = namespace(current_entity=False) %}
-    <table>
-    {%- for k, v in data.entities.items() %}
-        <tr>
-            <td><a name="{{ k }}"></a>{{ k }}</td>
-            <td>{{ file_refs(v, config) }}</td>
-        </tr>
-    {% endfor -%}
+    <h2 class="display-3 text-center">Entities</h2>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Entity</th>
+                <th scope="col">Definition</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% set entities = data.entities.keys()|list|sort %}
+        {%- for e in entities %}
+            <tr>
+                <td>{{ e }}</td>
+                <td>{{ file_refs(data.entities.get(e, []), config) }}</td>
+            </tr>
+        {% endfor -%}
+        </tbody>
     </table>
 {% endblock %}
