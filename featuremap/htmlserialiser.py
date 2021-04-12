@@ -25,7 +25,7 @@ class HTMLSerialiser(Serialiser):
             # with open(path, "r", encoding="utf-8") as f:
             #     template = env.from_string(f.read())
 
-            page = template.render(data=data)
+            page = template.render(data=data, page=template_name)
 
             outfile = os.path.join(container, template_name + ".html")
             with open(outfile, "w", encoding="utf-8") as f:

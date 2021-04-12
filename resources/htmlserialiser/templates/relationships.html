@@ -6,7 +6,7 @@
 {% block page_title %}Relationships{% endblock %}
 
 {% block content %}
-    <h2>Relationships</h2>
+    <h2 class="display-3 text-center">Relationships</h2>
     {% set ns = namespace(current_entity=False) %}
     {%- for triple in data.ordered_triples %}
         {%- if triple[0] != ns.current_entity %}
@@ -17,9 +17,16 @@
 
             {% set ns.current_entity = triple[0] %}
 
-            <h2><a name="{{ triple[0] }}"></a>{{ triple[0] }}</h2>
+            <h3><a name="{{ triple[0] }}"></a>{{ triple[0] }}</h3>
             <p>{{ file_refs(data.entity_definitions(triple[0]), config) }}</p>
-                <table>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Rel</th>
+                            <th scope="col">Entity</th>
+                            <th scope="col">Definitions</th>
+                        </tr>
+                    </thead>
         {% endif -%}
 
             <tr>
