@@ -24,7 +24,7 @@ in documentation, deployment scripts, configuration, etc.
 This repository is fully annotated using FeatureMap, so you can quickly see what the 
 annotations and the output of a FeatureMap report look like.
 
-[Look at our core.py source file](https://github.com/CottageLabs/FeatureMap/blob/main/featuremap/core.py)
+[Look at our core.py source file](https://github.com/CottageLabs/FeatureMap/blob/main/featuremap/core.py){:target="_blank"}
 
 Throughout that file you will see annotations like
 
@@ -44,7 +44,7 @@ defined.
 When FeatureMap is run against the code it will extract those to a report that allows you to explore the
 structure of your code:
 
-[See the FeatureMap's FeatureMap!](https://cottagelabs.github.io/FeatureMap/map/html/relationships.html)
+[See the FeatureMap's FeatureMap!](https://cottagelabs.github.io/FeatureMap/map/html/relationships.html){:target="_blank"}
 
 ## Key concepts
 
