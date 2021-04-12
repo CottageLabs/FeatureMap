@@ -1,8 +1,8 @@
-import importlib
+"""
+~~Plugin:Core~~
+"""
 
-# Note that we delay import of app to the functions which need it,
-# since we may want to load plugins during app creation too, and otherwise
-# we'd get circular import problems
+import importlib
 
 PLUGIN_CLASS_REFS = {}
 PLUGIN_FN_REFS = {}

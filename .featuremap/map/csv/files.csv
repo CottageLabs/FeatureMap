@@ -1,18 +1,18 @@
 File Path,Annotation Count
-./setup.py,0
-./featuremap/plugin.py,0
-./featuremap/models.py,0
+./setup.py,2
+./featuremap/plugin.py,1
+./featuremap/models.py,5
 ./featuremap/cli.py,2
 ./featuremap/jsonserialiser.py,2
 ./featuremap/htmlserialiser.py,3
 ./featuremap/core.py,25
-./featuremap/lex.py,0
+./featuremap/lex.py,1
 ./featuremap/exceptions.py,1
 ./featuremap/__init__.py,0
 ./featuremap/csvserialiser.py,3
 ./resources/htmlserialiser/templates/_header.html,1
-./resources/htmlserialiser/templates/_footer.html,0
-./resources/htmlserialiser/templates/_js_includes.html,0
+./resources/htmlserialiser/templates/_footer.html,1
+./resources/htmlserialiser/templates/_js_includes.html,1
 ./resources/htmlserialiser/templates/_macros.html,0
 ./resources/htmlserialiser/templates/files.html,1
 ./resources/htmlserialiser/templates/base.html,4

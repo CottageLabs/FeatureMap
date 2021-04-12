@@ -5,7 +5,7 @@ from featuremap.models import Serialiser
 
 class JSONSerialiser(Serialiser):
     """
-    ~~JSON:Serialiser~~
+    ~~JSON:Serialiser->Serialiser:Serialiser~~
     ~~-> Analysis:Model ~~
     """
 

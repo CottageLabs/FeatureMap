@@ -1,6 +1,9 @@
 import os
 
 class Analysis(object):
+    """
+    ~~Analysis:Model~~
+    """
     def __init__(self):
         self._relations = {}
         self._files = {}
@@ -78,6 +81,7 @@ class Analysis(object):
         self.add_known_target(name)
 
     def add_relation(self, name):
+        #~~-> Relation:Model ~~
         if name not in self._relations:
             self._relations[name] = Relation(self, name)
         self.add_known_target(name)
@@ -102,7 +106,11 @@ class Analysis(object):
 
 
 class Relation(object):
+    """
+    ~~Relation:Model~~
+    """
     def __init__(self, analysis, name=None):
+        # ~~-> Analysis:Model ~~
         self.analysis = analysis
         self.name = name
         self.refs = {}
@@ -160,6 +168,9 @@ class Relation(object):
 
 
 class Serialiser(object):
+    """
+    ~~Serialiser:Serialiser~~
+    """
     def __init__(self, global_config, serialiser_config):
         self.global_config = global_config
         self.my_config = serialiser_config

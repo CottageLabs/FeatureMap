@@ -1,5 +1,53 @@
 {
   "relations": {
+    "Setup:Core": {
+      "name": "Setup:Core",
+      "refs": {
+        "->": {
+          "CLI:Entrypoint": [
+            {
+              "file": "./setup.py",
+              "line": 19
+            }
+          ]
+        }
+      },
+      "targets": [
+        "CLI:Entrypoint"
+      ]
+    },
+    "Analysis:Model": {
+      "name": "Analysis:Model",
+      "refs": {
+        "->": {
+          "Relation:Model": [
+            {
+              "file": "./featuremap/models.py",
+              "line": 84
+            }
+          ]
+        }
+      },
+      "targets": [
+        "Relation:Model"
+      ]
+    },
+    "Relation:Model": {
+      "name": "Relation:Model",
+      "refs": {
+        "->": {
+          "Analysis:Model": [
+            {
+              "file": "./featuremap/models.py",
+              "line": 113
+            }
+          ]
+        }
+      },
+      "targets": [
+        "Analysis:Model"
+      ]
+    },
     "CLI:Entrypoint": {
       "name": "CLI:Entrypoint",
       "refs": {
@@ -20,6 +68,12 @@
       "name": "JSON:Serialiser",
       "refs": {
         "->": {
+          "Serialiser:Serialiser": [
+            {
+              "file": "./featuremap/jsonserialiser.py",
+              "line": 8
+            }
+          ],
           "Analysis:Model": [
             {
               "file": "./featuremap/jsonserialiser.py",
@@ -29,6 +83,7 @@
         }
       },
       "targets": [
+        "Serialiser:Serialiser",
         "Analysis:Model"
       ]
     },
@@ -36,6 +91,12 @@
       "name": "HTML:Serialiser",
       "refs": {
         "->": {
+          "Serialiser:Serialiser": [
+            {
+              "file": "./featuremap/htmlserialiser.py",
+              "line": 11
+            }
+          ],
           "Analysis:Model": [
             {
               "file": "./featuremap/htmlserialiser.py",
@@ -51,6 +112,7 @@
         }
       },
       "targets": [
+        "Serialiser:Serialiser",
         "Analysis:Model",
         "Jinja2:Tech"
       ]
@@ -234,10 +296,32 @@
         "MapException:Exception"
       ]
     },
+    "Parser:Core": {
+      "name": "Parser:Core",
+      "refs": {
+        "->": {
+          "Lark:Tech": [
+            {
+              "file": "./featuremap/lex.py",
+              "line": 1
+            }
+          ]
+        }
+      },
+      "targets": [
+        "Lark:Tech"
+      ]
+    },
     "CSV:Serialiser": {
       "name": "CSV:Serialiser",
       "refs": {
         "->": {
+          "Serialiser:Serialiser": [
+            {
+              "file": "./featuremap/csvserialiser.py",
+              "line": 8
+            }
+          ],
           "Analysis:Model": [
             {
               "file": "./featuremap/csvserialiser.py",
@@ -253,6 +337,7 @@
         }
       },
       "targets": [
+        "Serialiser:Serialiser",
         "Analysis:Model",
         "Config:Config"
       ]
@@ -344,20 +429,20 @@
     }
   },
   "files": {
-    "./setup.py": 0,
-    "./featuremap/plugin.py": 0,
-    "./featuremap/models.py": 0,
+    "./setup.py": 2,
+    "./featuremap/plugin.py": 1,
+    "./featuremap/models.py": 5,
     "./featuremap/cli.py": 2,
     "./featuremap/jsonserialiser.py": 2,
     "./featuremap/htmlserialiser.py": 3,
     "./featuremap/core.py": 25,
-    "./featuremap/lex.py": 0,
+    "./featuremap/lex.py": 1,
     "./featuremap/exceptions.py": 1,
     "./featuremap/__init__.py": 0,
     "./featuremap/csvserialiser.py": 3,
     "./resources/htmlserialiser/templates/_header.html": 1,
-    "./resources/htmlserialiser/templates/_footer.html": 0,
-    "./resources/htmlserialiser/templates/_js_includes.html": 0,
+    "./resources/htmlserialiser/templates/_footer.html": 1,
+    "./resources/htmlserialiser/templates/_js_includes.html": 1,
     "./resources/htmlserialiser/templates/_macros.html": 0,
     "./resources/htmlserialiser/templates/files.html": 1,
     "./resources/htmlserialiser/templates/base.html": 4,
@@ -365,6 +450,36 @@
     "./resources/htmlserialiser/templates/relationships.html": 1
   },
   "entities": {
+    "Setup:Core": [
+      {
+        "file": "./setup.py",
+        "line": 4
+      }
+    ],
+    "Plugin:Core": [
+      {
+        "file": "./featuremap/plugin.py",
+        "line": 2
+      }
+    ],
+    "Analysis:Model": [
+      {
+        "file": "./featuremap/models.py",
+        "line": 5
+      }
+    ],
+    "Relation:Model": [
+      {
+        "file": "./featuremap/models.py",
+        "line": 110
+      }
+    ],
+    "Serialiser:Serialiser": [
+      {
+        "file": "./featuremap/models.py",
+        "line": 172
+      }
+    ],
     "CLI:Entrypoint": [
       {
         "file": "./featuremap/cli.py",
@@ -413,6 +528,12 @@
         "line": 184
       }
     ],
+    "Parser:Core": [
+      {
+        "file": "./featuremap/lex.py",
+        "line": 1
+      }
+    ],
     "MapException:Exception": [
       {
         "file": "./featuremap/exceptions.py",
@@ -428,6 +549,18 @@
     "Navigation:UIComponent": [
       {
         "file": "./resources/htmlserialiser/templates/_header.html",
+        "line": 1
+      }
+    ],
+    "Footer:UIComponent": [
+      {
+        "file": "./resources/htmlserialiser/templates/_footer.html",
+        "line": 1
+      }
+    ],
+    "JSIncludes:UIComponent": [
+      {
+        "file": "./resources/htmlserialiser/templates/_js_includes.html",
         "line": 1
       }
     ],
@@ -457,30 +590,37 @@
     ]
   },
   "targets": [
-    "Navigation:UIComponent",
-    "Page:Page",
-    "Relationships:Page",
-    "CLI:Entrypoint",
-    "CSV:Serialiser",
     "Parser:Lex",
     "Entities:Page",
-    "MapException:Exception",
-    "Files:Page",
-    "ParseReference:Core",
-    "Footer:UIComponent",
-    "Terminals:Config",
-    "HTML:Serialiser",
-    "Types:Config",
-    "ParseTree:Core",
-    "Header:UIComponent",
-    "Config:Config",
-    "Serialisers:Serialisers",
     "Runner:Core",
-    "ParseFile:Core",
+    "Parser:Core",
+    "Lark:Tech",
+    "Navigation:UIComponent",
+    "Serialisers:Serialisers",
+    "Relationships:Page",
+    "Serialiser:Serialiser",
+    "Types:Config",
+    "Page:Page",
+    "Header:UIComponent",
+    "HTML:Serialiser",
+    "CSV:Serialiser",
     "Analysis:Model",
+    "Files:Page",
     "Jinja2:Tech",
+    "Setup:Core",
     "JSON:Serialiser",
-    "ValidateEntity:Core"
+    "ParseReference:Core",
+    "Relation:Model",
+    "JSIncludes:UIComponent",
+    "MapException:Exception",
+    "Terminals:Config",
+    "ValidateEntity:Core",
+    "Footer:UIComponent",
+    "ParseFile:Core",
+    "Plugin:Core",
+    "CLI:Entrypoint",
+    "Config:Config",
+    "ParseTree:Core"
   ],
   "terminals": []
 }

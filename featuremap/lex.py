@@ -1,4 +1,4 @@
-# ~~Parser:Core -> Lark:Tech
+# ~~Parser:Core -> Lark:Tech~~
 
 from lark import Lark
 

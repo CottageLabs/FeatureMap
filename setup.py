@@ -1,6 +1,8 @@
 from setuptools import setup, find_packages
 import sys
 
+# ~~Setup:Core~~
+
 setup(
     name = 'featuremap',
     version = '0.0.1',
@@ -14,6 +16,7 @@ setup(
     classifiers = [],
     entry_points = {
         'console_scripts': [
+            # ~~-> CLI:Entrypoint ~~
             'featuremap=featuremap.cli:main',
         ],
     }

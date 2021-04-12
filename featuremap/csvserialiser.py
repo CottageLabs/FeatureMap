@@ -5,7 +5,7 @@ from featuremap.models import Serialiser
 
 class CSVSerialiser(Serialiser):
     """
-    ~~CSV:Serialiser~~
+    ~~CSV:Serialiser->Serialiser:Serialiser~~
     ~~-> Analysis:Model ~~
     ~~-> Config:Config ~~
     """

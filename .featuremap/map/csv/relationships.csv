@@ -1,5 +1,10 @@
+Setup:Core,->,CLI:Entrypoint,./setup.py#L19,https://github.com/CottageLabs/FeatureMap/tree/main/./setup.py#L19
+Analysis:Model,->,Relation:Model,./featuremap/models.py#L84,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/models.py#L84
+Relation:Model,->,Analysis:Model,./featuremap/models.py#L113,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/models.py#L113
 CLI:Entrypoint,->,Runner:Core,./featuremap/cli.py#L19,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/cli.py#L19
+JSON:Serialiser,->,Serialiser:Serialiser,./featuremap/jsonserialiser.py#L8,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/jsonserialiser.py#L8
 JSON:Serialiser,->,Analysis:Model,./featuremap/jsonserialiser.py#L9,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/jsonserialiser.py#L9
+HTML:Serialiser,->,Serialiser:Serialiser,./featuremap/htmlserialiser.py#L11,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/htmlserialiser.py#L11
 HTML:Serialiser,->,Analysis:Model,./featuremap/htmlserialiser.py#L12,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/htmlserialiser.py#L12
 HTML:Serialiser,->,Jinja2:Tech,./featuremap/htmlserialiser.py#L13,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/htmlserialiser.py#L13
 ParseTree:Core,->,Config:Config,./featuremap/core.py#L20,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L20
@@ -19,6 +24,8 @@ Runner:Core,->,Analysis:Model,./featuremap/core.py#L209,https://github.com/Cotta
 Runner:Core,->,ParseTree:Core,./featuremap/core.py#L213,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L213
 Runner:Core,->,Serialisers:Serialisers,./featuremap/core.py#L216,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L216
 Runner:Core,->,MapException:Exception,./featuremap/core.py#L224,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L224
+Parser:Core,->,Lark:Tech,./featuremap/lex.py#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/lex.py#L1
+CSV:Serialiser,->,Serialiser:Serialiser,./featuremap/csvserialiser.py#L8,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/csvserialiser.py#L8
 CSV:Serialiser,->,Analysis:Model,./featuremap/csvserialiser.py#L9,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/csvserialiser.py#L9
 CSV:Serialiser,->,Config:Config,./featuremap/csvserialiser.py#L10,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/csvserialiser.py#L10
 Files:Page,->,Page:Page,./resources/htmlserialiser/templates/files.html#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/files.html#L1
