@@ -18,9 +18,33 @@ has some form of comment syntax, then FeatureMap can be used.  This allows it to
 provide a view across all source files of all different languages, as well as bringing
 in documentation, deployment scripts, configuration, etc.
 
-## Quick Start
 
+## Show me it
 
+This repository is fully annotated using FeatureMap, so you can quickly see what the 
+annotations and the output of a FeatureMap report look like.
+
+[https://github.com/CottageLabs/FeatureMap/blob/main/featuremap/core.py](Look at our core.py source file)
+
+Throughout that file you will see annotations like
+
+```
+~~ParseTree:Core~~
+```
+
+later followed by
+
+```
+# ~~-> Config:Config~~
+```
+
+These are all in python line comments next to the code most relevant to the entity or relationship being
+defined.
+
+When FeatureMap is run against the code it will extract those to a report that allows you to explore the
+structure of your code:
+
+[https://cottagelabs.github.io/FeatureMap/](See the FeatureMap's FeatureMap!)
 
 ## Key concepts
 

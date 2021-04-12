@@ -22,7 +22,7 @@ delimiter: ~~
 types: .featuremap/types.csv
 type_validation: error
 terminals: .featuremap/terminals.csv
-out_dir: .featuremap/map
+out_dir: docs/map
 serialisers:
   - class: featuremap.jsonserialiser.JSONSerialiser
     dir: json
