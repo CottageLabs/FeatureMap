@@ -11,10 +11,19 @@ def main():
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("-c", "--config", help="config file")
+    parser.add_argument("-s", "--source_url", help="URL to link to source files. Will override any source_url in the config file")
+    parser.add_argument("-o", "--out_dir",
+                        help="Output directory. Will override any source_url in the config file")
     args = parser.parse_args()
 
     with open(args.config, "r", encoding="utf-8") as f:
         config = yaml.load(f.read(), Loader=yaml.CLoader)
+
+    if args.source_url:
+        config["source_url"] = args.source_url
+
+    if args.out_dir:
+        config["out_dir"] = args.out_dir
 
     # ~~->Runner:Core~~
     run(config)
