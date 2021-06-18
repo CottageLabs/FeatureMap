@@ -20,8 +20,8 @@ def parse_tree(config, analysis):
     # ~~-> Config:Config~~
     directory = config.get("base_dir")
     exclude_dirs = config.get("exclude_dirs", [])
-    exclude_files = config.get("exclude", [])
-    include_files = config.get("include", [])
+    exclude = config.get("exclude", [])
+    include = config.get("include", [])
 
     for root, dirs, files in os.walk(directory):
         skip = False
@@ -34,23 +34,23 @@ def parse_tree(config, analysis):
             continue
 
         for name in files:
-            skip = False
-            for ef in exclude_files:
-                if fnmatch.fnmatch(name, ef):
-                    skip = True
-                    break
-            if skip:
-                continue
+            path = os.path.join(root, name)
+            excluded = False
 
-            match = False
-            for incf in include_files:
-                if fnmatch.fnmatch(name, incf):
-                    match = True
-            if not match:
+            for exclude_pattern in exclude:
+                if fnmatch.fnmatch(path, os.path.join(".", exclude_pattern)):
+                    excluded = True
+                    break
+
+            included = False
+            for incf in include:
+                if fnmatch.fnmatch(path, os.path.join(".", incf)):
+                    included = True
+
+            if excluded and not included:
                 continue
 
             # ~~->ParseFile:Core ~~
-            path = os.path.join(root, name)
             parse_file(config, path, analysis)
 
 

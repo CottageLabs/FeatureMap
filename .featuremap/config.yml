@@ -1,10 +1,6 @@
 project_name: "FeatureMap"
 base_dir: .
 source_url: https://github.com/CottageLabs/FeatureMap/tree/main
-include:
-  - "*.py"
-  - "*.html"
-  - "*.md"
 exclude:
   - "*.pyc"
   - "*.png"
@@ -12,11 +8,19 @@ exclude:
   - "*.jpg"
   - "*.ico"
   - "*.jpeg"
-  - README.md
+  - "README.md"
+  - ".gitignore"
+  - "requirements.txt"
+  - "setup.py"
+  - "LICENSE"
 exclude_dirs:
   - .featuremap
+  - .git
+  - .idea
   - example
   - docs/map
+  - featuremap.egg-info
+#include: # No need for any overrides to the exclude directive
 ignore_parse_errors:
   - noop
 delimiter: ~~

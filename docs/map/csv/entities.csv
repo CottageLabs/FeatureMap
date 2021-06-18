@@ -1,11 +1,10 @@
-Setup:Core,./setup.py#L4,https://github.com/CottageLabs/FeatureMap/tree/main/./setup.py#L4
 Plugin:Core,./featuremap/plugin.py#L2,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/plugin.py#L2
 Analysis:Model,./featuremap/models.py#L5,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/models.py#L5
 Relation:Model,./featuremap/models.py#L126,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/models.py#L126
 Serialiser:Serialiser,./featuremap/models.py#L188,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/models.py#L188
 CLI:Entrypoint,./featuremap/cli.py#L8,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/cli.py#L8
 JSON:Serialiser,./featuremap/jsonserialiser.py#L8,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/jsonserialiser.py#L8
-HTML:Serialiser,./featuremap/htmlserialiser.py#L11,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/htmlserialiser.py#L11
+HTML:Serialiser,./featuremap/htmlserialiser.py#L18,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/htmlserialiser.py#L18
 ParseTree:Core,./featuremap/core.py#L14,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L14
 ParseFile:Core,./featuremap/core.py#L59,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L59
 ValidateEntity:Core,./featuremap/core.py#L137,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L137

@@ -1,21 +1,5 @@
 {
   "relations": {
-    "Setup:Core": {
-      "name": "Setup:Core",
-      "refs": {
-        "->": {
-          "CLI:Entrypoint": [
-            {
-              "file": "./setup.py",
-              "line": 19
-            }
-          ]
-        }
-      },
-      "targets": [
-        "CLI:Entrypoint"
-      ]
-    },
     "Analysis:Model": {
       "name": "Analysis:Model",
       "refs": {
@@ -55,7 +39,7 @@
           "Runner:Core": [
             {
               "file": "./featuremap/cli.py",
-              "line": 19
+              "line": 28
             }
           ]
         }
@@ -94,19 +78,19 @@
           "Serialiser:Serialiser": [
             {
               "file": "./featuremap/htmlserialiser.py",
-              "line": 11
+              "line": 18
             }
           ],
           "Analysis:Model": [
             {
               "file": "./featuremap/htmlserialiser.py",
-              "line": 12
+              "line": 19
             }
           ],
           "Jinja2:Tech": [
             {
               "file": "./featuremap/htmlserialiser.py",
-              "line": 13
+              "line": 20
             }
           ]
         }
@@ -130,7 +114,7 @@
           "ParseFile:Core": [
             {
               "file": "./featuremap/core.py",
-              "line": 52
+              "line": 53
             }
           ]
         }
@@ -493,7 +477,6 @@
     }
   },
   "files": {
-    "./setup.py": 2,
     "./featuremap/plugin.py": 1,
     "./featuremap/models.py": 5,
     "./featuremap/cli.py": 2,
@@ -517,12 +500,6 @@
     "./resources/htmlserialiser/templates/relationships.html": 1
   },
   "entities": {
-    "Setup:Core": [
-      {
-        "file": "./setup.py",
-        "line": 4
-      }
-    ],
     "Plugin:Core": [
       {
         "file": "./featuremap/plugin.py",
@@ -562,7 +539,7 @@
     "HTML:Serialiser": [
       {
         "file": "./featuremap/htmlserialiser.py",
-        "line": 11
+        "line": 18
       }
     ],
     "ParseTree:Core": [
@@ -675,38 +652,37 @@
     ]
   },
   "targets": [
-    "Relationships:Page",
-    "Footer:UIComponent",
-    "UnexpectedDownstream:Page",
-    "Files:Page",
-    "Lark:Tech",
-    "Types:Config",
-    "ParseFile:Core",
-    "ParseTree:Core",
-    "Relation:Model",
-    "Page:Page",
-    "Analysis:Model",
-    "Entities:Page",
-    "Terminals:Config",
     "Navigation:UIComponent",
-    "Header:UIComponent",
-    "UnseenTerminals:Page",
-    "Runner:Core",
-    "HTML:Serialiser",
-    "Setup:Core",
-    "Serialiser:Serialiser",
-    "Config:Config",
-    "Plugin:Core",
-    "MapException:Exception",
-    "NoDownstream:Page",
-    "Parser:Core",
-    "JSIncludes:UIComponent",
-    "ValidateEntity:Core",
-    "CLI:Entrypoint",
-    "CSV:Serialiser",
     "Jinja2:Tech",
-    "ParseReference:Core",
-    "JSON:Serialiser"
+    "CLI:Entrypoint",
+    "ParseTree:Core",
+    "Types:Config",
+    "Plugin:Core",
+    "ValidateEntity:Core",
+    "Terminals:Config",
+    "CSV:Serialiser",
+    "Runner:Core",
+    "Parser:Core",
+    "Page:Page",
+    "MapException:Exception",
+    "HTML:Serialiser",
+    "Footer:UIComponent",
+    "Lark:Tech",
+    "Config:Config",
+    "UnexpectedDownstream:Page",
+    "Relationships:Page",
+    "Serialiser:Serialiser",
+    "Entities:Page",
+    "NoDownstream:Page",
+    "ParseFile:Core",
+    "Relation:Model",
+    "JSIncludes:UIComponent",
+    "UnseenTerminals:Page",
+    "Files:Page",
+    "Header:UIComponent",
+    "Analysis:Model",
+    "JSON:Serialiser",
+    "ParseReference:Core"
   ],
   "terminals": [
     "MapException:Exception",
