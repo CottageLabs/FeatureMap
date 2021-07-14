@@ -56,6 +56,12 @@ Clone this repo:
 git clone git@github.com:CottageLabs/FeatureMap.git
 ```
 
+Install system dependencies (for `yaml.CLoader`) e.g. for Ubuntu:
+
+```
+apt install libyaml-dev
+```
+
 Install the library into your (virtual) environment:
 
 ```
