@@ -239,7 +239,7 @@ This is possible to do explicitly using the `!` operator:
 ```
 # ~~Homepage:Page~~
 # ~~->$ Login:Feature~~
-# ~~->!Login:Feature->Login:Page~~
+# ~~!Login:Feature->Login:Page~~
 ```
 
 But there is also a convenient short-hand for this using the `^` pointer, which tells FeatureMap
