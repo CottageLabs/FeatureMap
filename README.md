@@ -249,7 +249,7 @@ above is equivalent to:
 ```
 # ~~Homepage:Page~~
 # ~~->$ Login:Feature~~
-# ~~^->Login:Feature->Login:Page~~
+# ~~^->Login:Page~~
 ```
 
 The `^` pointer will refer to the `Login:Feature` entity until the end of the file, or until another entity
