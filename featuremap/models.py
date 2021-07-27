@@ -39,8 +39,18 @@ class Analysis(object):
 
     @property
     def unexpected_downstreams(self):
-        return [(t, self.entity_definitions(t). self.relations.get(t))
-                for t in self._terminals if t in self._relations]
+        return [
+            (
+                t,
+                self.entity_definitions(t),
+                [
+                    item for sublist in
+                    [ot[3] for ot in self.relations.get(t).ordered_triples]
+                    for item in sublist
+                ] if self.relations.get(t) is not None else []
+            )
+            for t in self._terminals if t in self._relations
+        ]
 
     @property
     def unseen_terminals(self):
@@ -82,7 +92,7 @@ class Analysis(object):
         return irds
 
     def entity_definitions(self, entity_name):
-        return self._entities.get(entity_name, "")
+        return self._entities.get(entity_name, [])
 
     def add_known_target(self, target):
         self._targets.add(target)

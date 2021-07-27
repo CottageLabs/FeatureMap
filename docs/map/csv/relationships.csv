@@ -1,5 +1,5 @@
-Analysis:Model,->,Relation:Model,./featuremap/models.py#L100,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/models.py#L100
-Relation:Model,->,Analysis:Model,./featuremap/models.py#L129,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/models.py#L129
+Analysis:Model,->,Relation:Model,./featuremap/models.py#L110,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/models.py#L110
+Relation:Model,->,Analysis:Model,./featuremap/models.py#L139,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/models.py#L139
 CLI:Entrypoint,->,Runner:Core,./featuremap/cli.py#L28,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/cli.py#L28
 JSON:Serialiser,->,Serialiser:Serialiser,./featuremap/jsonserialiser.py#L8,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/jsonserialiser.py#L8
 JSON:Serialiser,->,Analysis:Model,./featuremap/jsonserialiser.py#L9,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/jsonserialiser.py#L9
@@ -10,19 +10,19 @@ ParseTree:Core,->,Config:Config,./featuremap/core.py#L20,https://github.com/Cott
 ParseTree:Core,->,ParseFile:Core,./featuremap/core.py#L53,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L53
 ParseFile:Core,->,Config:Config,./featuremap/core.py#L66,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L66
 ParseFile:Core,->,Analysis:Model,./featuremap/core.py#L74,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L74
-ParseFile:Core,->,ParseReference:Core,./featuremap/core.py#L90,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L90
-ParseFile:Core,->,MapException:Exception,./featuremap/core.py#L93; ./featuremap/core.py#L108; ./featuremap/core.py#L115; ./featuremap/core.py#L121,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L93; https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L108; https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L115; https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L121
-ParseFile:Core,->,ValidateEntity:Core,./featuremap/core.py#L105,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L105
-ValidateEntity:Core,->,MapException:Exception,./featuremap/core.py#L149,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L149
-ParseReference:Core,->,Parser:Core,./featuremap/core.py#L160,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L160
-ParseReference:Core,->,MapException:Exception,./featuremap/core.py#L163,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L163
-Runner:Core,->,Config:Config,./featuremap/core.py#L189,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L189
-Runner:Core,->,Types:Config,./featuremap/core.py#L194,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L194
-Runner:Core,->,Terminals:Config,./featuremap/core.py#L202,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L202
-Runner:Core,->,Analysis:Model,./featuremap/core.py#L209,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L209
-Runner:Core,->,ParseTree:Core,./featuremap/core.py#L213,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L213
-Runner:Core,->,Serialiser:Serialiser,./featuremap/core.py#L216,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L216
-Runner:Core,->,MapException:Exception,./featuremap/core.py#L224,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L224
+ParseFile:Core,->,ParseReference:Core,./featuremap/core.py#L91,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L91
+ParseFile:Core,->,MapException:Exception,./featuremap/core.py#L94; ./featuremap/core.py#L122; ./featuremap/core.py#L137; ./featuremap/core.py#L153; ./featuremap/core.py#L160; ./featuremap/core.py#L165,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L94; https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L122; https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L137; https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L153; https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L160; https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L165
+ParseFile:Core,->,ValidateEntity:Core,./featuremap/core.py#L119,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L119
+ValidateEntity:Core,->,MapException:Exception,./featuremap/core.py#L191,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L191
+ParseReference:Core,->,Parser:Core,./featuremap/core.py#L202,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L202
+ParseReference:Core,->,MapException:Exception,./featuremap/core.py#L205,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L205
+Runner:Core,->,Config:Config,./featuremap/core.py#L239,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L239
+Runner:Core,->,Types:Config,./featuremap/core.py#L244,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L244
+Runner:Core,->,Terminals:Config,./featuremap/core.py#L252,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L252
+Runner:Core,->,Analysis:Model,./featuremap/core.py#L259,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L259
+Runner:Core,->,ParseTree:Core,./featuremap/core.py#L263,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L263
+Runner:Core,->,Serialiser:Serialiser,./featuremap/core.py#L266,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L266
+Runner:Core,->,MapException:Exception,./featuremap/core.py#L274,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/core.py#L274
 Parser:Core,->,Lark:Tech,./featuremap/lex.py#L1,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/lex.py#L1
 CSV:Serialiser,->,Serialiser:Serialiser,./featuremap/csvserialiser.py#L8,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/csvserialiser.py#L8
 CSV:Serialiser,->,Analysis:Model,./featuremap/csvserialiser.py#L9,https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/csvserialiser.py#L9

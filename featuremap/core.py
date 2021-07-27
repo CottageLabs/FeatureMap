@@ -17,7 +17,7 @@ def parse_tree(config, analysis):
     :return:
     """
 
-    # ~~-> Config:Config~~
+    # ~~->$ Config:Config~~
     directory = config.get("base_dir")
     exclude_dirs = config.get("exclude_dirs", [])
     exclude = config.get("exclude", [])
@@ -75,6 +75,7 @@ def parse_file(config, file, analysis):
     analysis.add_file(file)
     with open(file, "r") as f:
         context = False
+        last_entity = False
         ln = 0
         try:
             for line in f:
@@ -97,39 +98,80 @@ def parse_file(config, file, analysis):
                             e.line = ln
                             raise
 
-                        if ref.get("switch_context", True):
-                            if "context" in ref:
-                                context = ref["context"]
+                        new_context, new_last_entity = _apply_operation(ref, valid_types, type_validation, f, ln, analysis, context, last_entity)
+                        if new_context is not None:
+                            context = new_context
+                        if new_last_entity is not None:
+                            last_entity = new_last_entity
 
-                                try:
-                                    # ~~-> ValidateEntity:Core~~
-                                    validate_entity(context, valid_types, type_validation)
-                                except MapException as e:
-                                    # ~~-> MapException:Exception ~~
-                                    e.file = f.name
-                                    e.line = ln
-                                    raise
-
-                                analysis.add_entity_definition(context, f.name, ln)
-                            if not context:
-                                # ~~-> MapException:Exception ~~
-                                raise MapException("Context not set when annotation provided", f.name, ln)
-                            if "rel" in ref:
-                                try:
-                                    validate_entity(ref["target"], valid_types, type_validation)
-                                except MapException as e:
-                                    # ~~-> MapException:Exception ~~
-                                    e.file = f.name
-                                    e.line = ln
-                                    raise
-                                relation = analysis.add_relation(context)
-                                relation.add_ref(ref["rel"], ref["target"], f.name, ln)
-                        else:
-                            analysis.add_entity_definition(ref["context"], f.name, ln)
-                            relation = analysis.add_relation(ref["context"])
-                            relation.add_ref(ref["rel"], ref["target"], f.name, ln)
         except UnicodeDecodeError as e:
             print("UnicodeDecodeError on file {f}".format(f=file))
+
+
+def _apply_operation(ref, valid_types, type_validation, f, ln, analysis, original_context, original_last_entity):
+    new_context = None
+    last_entity = None
+
+    if "context" in ref:
+        context = ref["context"]
+
+        try:
+            # ~~-> ValidateEntity:Core~~
+            validate_entity(context, valid_types, type_validation)
+        except MapException as e:
+            # ~~-> MapException:Exception ~~
+            e.file = f.name
+            e.line = ln
+            raise
+
+        analysis.add_entity_definition(context, f.name, ln)
+        last_entity = context
+
+        if ref.get("switch_context", False):
+            new_context = context
+
+        if "rel" in ref and "target" in ref:
+            try:
+                validate_entity(ref["target"], valid_types, type_validation)
+            except MapException as e:
+                # ~~-> MapException:Exception ~~
+                e.file = f.name
+                e.line = ln
+                raise
+
+            relation = analysis.add_relation(context)
+            relation.add_ref(ref["rel"], ref["target"], f.name, ln)
+
+            if ref.get("register_relation_as_entity", False):
+                analysis.add_entity_definition(ref["target"], f.name, ln)
+                last_entity = ref["target"]
+
+    else:
+        try:
+            validate_entity(ref["target"], valid_types, type_validation)
+        except MapException as e:
+            # ~~-> MapException:Exception ~~
+            e.file = f.name
+            e.line = ln
+            raise
+
+        if ref.get("register_on_last_entity", False):
+            if not original_last_entity:
+                # ~~-> MapException:Exception ~~
+                raise MapException("No previously defined entity set when annotation provided", f.name, ln)
+            relation = analysis.add_relation(original_last_entity)
+        else:
+            if not original_context:
+                # ~~-> MapException:Exception ~~
+                raise MapException("Context not set when annotation provided", f.name, ln)
+            relation = analysis.add_relation(original_context)
+        relation.add_ref(ref["rel"], ref["target"], f.name, ln)
+
+        if ref.get("register_relation_as_entity", False):
+            analysis.add_entity_definition(ref["target"], f.name, ln)
+            last_entity = ref["target"]
+
+    return new_context, last_entity
 
 
 def validate_entity(entity, valid_types, type_validation):
@@ -163,7 +205,11 @@ def parse_reference(text):
         #~~-> MapException:Exception ~~
         raise MapException("Unable to parse text '{x}'".format(x=text))
 
-    resp = {}
+    resp = {
+        "switch_context" : True,
+        "register_on_last_entity": False,
+        "register_relation_as_entity" : False
+    }
     for child in tree.children:
         field_name = child.data
         field_value = child.children[0].value.strip()
@@ -176,6 +222,10 @@ def parse_reference(text):
             resp["rel"] = field_value
         if field_name == "entity":
             resp["target"] = field_value
+        if field_name == "pointer":
+            resp["register_on_last_entity"] = True
+        if field_name == "register":
+            resp["register_relation_as_entity"] = True
     return resp
 
 
@@ -223,3 +273,4 @@ def run(config):
     except MapException as e:
         # ~~-> MapException:Exception ~~
         print(str(e))
+        exit(1)
