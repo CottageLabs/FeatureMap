@@ -113,13 +113,17 @@ class Analysis(object):
         self.add_known_target(name)
         return self._relations[name]
 
-    def add_file(self, filename):
+    def add_file(self, filename, total_lines=0):
         if filename not in self._files:
-            self._files[filename] = 0
+            self._files[filename] = {"annotations" : 0, "total_lines" : total_lines}
 
     def annotation_hit(self, filename):
         self.add_file(filename)
-        self._files[filename] += 1
+        self._files[filename]["annotations"] += 1
+
+    def set_total_lines(self, filename, total_lines):
+        self.add_file(filename)
+        self._files[filename]["total_lines"] = total_lines
 
     def as_dict(self):
         return {

@@ -2,6 +2,7 @@ import os
 import csv
 
 from featuremap.models import Serialiser
+from featuremap import metrics
 
 class CSVSerialiser(Serialiser):
     """
@@ -25,9 +26,9 @@ class CSVSerialiser(Serialiser):
         filelist = os.path.join(container, "files.csv")
         with open(filelist, "w", encoding="utf-8") as o:
             writer = csv.writer(o)
-            writer.writerow(["File Path", "Annotation Count"])
+            writer.writerow(["File Path", "Annotation Count", "Line Count", "Completion Metric"])
             for k, v in data.files.items():
-                writer.writerow([k, v])
+                writer.writerow([k, v.get("annotations"), v.get("total_lines"), metrics.completion_metric(v.get("annotations"), v.get("total_lines"))])
 
         entities = os.path.join(container, "entities.csv")
         with open(entities, "w", encoding="utf-8") as o:

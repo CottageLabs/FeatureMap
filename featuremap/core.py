@@ -107,6 +107,9 @@ def parse_file(config, file, analysis):
         except UnicodeDecodeError as e:
             print("UnicodeDecodeError on file {f}".format(f=file))
 
+    # record the total number of lines in the file
+    analysis.set_total_lines(file, ln)
+
 
 def _apply_operation(ref, valid_types, type_validation, f, ln, analysis, original_context, original_last_entity):
     new_context = None
