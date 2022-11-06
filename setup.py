@@ -5,7 +5,7 @@ import sys
 
 setup(
     name = 'featuremap',
-    version = '0.0.1',
+    version = '0.1.1',
     packages = find_packages(),
     install_requires = [],
     url = 'http://cottagelabs.com/',

@@ -38,13 +38,13 @@ def parse_tree(config, analysis):
             excluded = False
 
             for exclude_pattern in exclude:
-                if fnmatch.fnmatch(path, os.path.join(".", exclude_pattern)):
+                if fnmatch.fnmatch(path, os.path.join(directory, exclude_pattern)):
                     excluded = True
                     break
 
             included = False
             for incf in include:
-                if fnmatch.fnmatch(path, os.path.join(".", incf)):
+                if fnmatch.fnmatch(path, os.path.join(directory, incf)):
                     included = True
 
             if excluded and not included:
@@ -240,8 +240,8 @@ def run(config):
     """
 
     # ~~->Config:Config~~
-    type_source = config.get("types")
-    terminals_source = config.get("terminals")
+    type_source = os.path.join(config.get("base_dir"), config.get("types"))
+    terminals_source = os.path.join(config.get("base_dir"), config.get("terminals"))
 
     try:
         # ~~->Types:Config~~
