@@ -1,6 +1,7 @@
 import os
 
 from featuremap.models import Serialiser
+from featuremap import metrics
 
 from jinja2 import Environment
 from jinja2 import FileSystemLoader
@@ -39,7 +40,7 @@ class HTMLSerialiser(Serialiser):
 
         for template_name, path in self.my_config.get("templates", self.DEFAULT_TEMPLATES).items():
             template = env.get_template(path)
-            page = template.render(data=data, page=template_name)
+            page = template.render(data=data, page=template_name, metrics=metrics)
             outfile = os.path.join(container, template_name + ".html")
             with open(outfile, "w", encoding="utf-8") as f:
                 f.write(page)

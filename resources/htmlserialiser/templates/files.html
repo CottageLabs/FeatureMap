@@ -9,17 +9,20 @@
     <h2 class="display-3 text-center">Files</h2>
     <p>Every file that has been parsed, along with the total number of annotations found in the file.  That includes
     all entity declarations and relationships.</p>
-    <table class="table table-striped table-hover">
+    <table class="table table-striped table-hover" id="fileList">
         <thead>
             <tr>
-                <th scope="col">File</th>
-                <th scope="col">Annotation Count</th>
+                <th scope="col" onclick="sortTable(0)">File</th>
+                <th scope="col" onclick="sortTable(1)">Annotation Count</th>
+                <th scope="col" onclick="sortTable(2)">Line Count</th>
+                <th scope="col" onclick="sortTable(3)">Completion Metric</th>
             </tr>
         </thead>
         <tbody>
         {% set filelist = data.files.keys()|list|sort %}
         {%- for fn in filelist %}
             {% set source_url = config.get("source_url") %}
+            {% set params = data.files.get(fn) %}
             <tr>
                 <td>
                     {%- if source_url %}
@@ -30,9 +33,69 @@
                         </a>
                     {% endif %}
                 </td>
-                <td>{{ data.files.get(fn) }}</td>
+                <td>{{ params.get("annotations") }}</td>
+                <td>{{ params.get("total_lines") }}</td>
+                <td>{{ metrics.completion_metric(params.get("annotations"), params.get("total_lines")) }}</td>
             </tr>
         {% endfor -%}
         </tbody>
     </table>
+{% endblock %}
+
+{% block extra_js_bottom %}
+
+<script type="text/javascript">
+var sortableTable = {data: [], rows: []};
+sortableTable.element = document.getElementById("fileList");
+sortableTable.tbody = sortableTable.element.getElementsByTagName("TBODY")[0];
+sortableTable.parsers = [
+    false,
+    parseInt,
+    parseInt,
+    parseFloat
+]
+sortableTable.sorters = {}
+sortableTable.sorters.asc = (n) => {
+    return (a, b) => {
+        return a[n] < b[n] ? -1 : 1
+    }
+}
+sortableTable.sorters.desc = (n) => {
+    return (a, b) => {
+        return a[n] > b[n] ? -1 : 1
+    }
+}
+sortableTable.state = {"by" : -1, "dir" : "asc"};
+
+for (let i = 1; i < (sortableTable.element.rows.length - 1); i++) {
+    let row = sortableTable.element.rows[i].cloneNode(true);
+    let tds = row.getElementsByTagName("TD");
+    let rowData = [i - 1];
+    for (let j = 0; j < tds.length; j++) {
+        let td = tds[j];
+        let val = td.innerText.toLowerCase();
+        if (sortableTable.parsers[j]) {
+            val = sortableTable.parsers[j](val);
+        }
+        rowData.push(val);
+    }
+    sortableTable.rows.push(row);
+    sortableTable.data.push(rowData);
+}
+
+function sortTable(n) {
+    if (sortableTable.state.by === n) {
+        sortableTable.state.dir = sortableTable.state.dir === "desc" ? "asc" : "desc";
+    }
+    sortableTable.state.by = n;
+    n = n + 1;
+    sortableTable.data.sort(sortableTable.sorters[sortableTable.state.dir](n));
+    sortableTable.tbody.textContent = "";
+    for (let i = 0; i < sortableTable.data.length; i++) {
+        let rid = sortableTable.data[i][0];
+        sortableTable.tbody.appendChild(sortableTable.rows[rid]);
+    }
+}
+</script>
+
 {% endblock %}
