@@ -1,3 +1,9 @@
 # MANIFEST.in
 
-include resources
+include *.txt
+recursive-include resources *.html
+recursive-include docs *.csv
+recursive-include docs *.html
+recursive-include docs *.json
+
+recursive-exclude .featuremap *
