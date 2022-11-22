@@ -3,14 +3,14 @@ from setuptools import setup, find_packages
 # ~~Setup:Core~~
 setup(
     name='featuremap',
-    version='0.1.2',
+    version='0.1.3',
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
+        "jinja2<3.1.0",
         "lark==0.11.1",
-        "jinja2==2.11.3",
         "pyyaml==5.4.1",
-        "markupsafe==2.0.1"
+        "MarkupSafe==2.0.1"
     ],
     url='https://cottagelabs.com/',
     author='Cottage Labs',
