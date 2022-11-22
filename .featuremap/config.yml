@@ -36,7 +36,7 @@ serialisers:
   - class: featuremap.htmlserialiser.HTMLSerialiser
     dir: html
     template_dirs:
-      - resources/htmlserialiser/templates
+      - featuremap/resources/htmlserialiser/templates
     templates:
       relationships: relationships.html
       entities: entities.html

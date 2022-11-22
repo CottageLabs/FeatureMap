@@ -40,15 +40,18 @@
     <h2 class="display-3 text-center">Files</h2>
     <p>Every file that has been parsed, along with the total number of annotations found in the file.  That includes
     all entity declarations and relationships.</p>
-    <table class="table table-striped table-hover">
+    <table class="table table-striped table-hover" id="fileList">
         <thead>
             <tr>
-                <th scope="col">File</th>
-                <th scope="col">Annotation Count</th>
+                <th scope="col" onclick="sortTable(0)">File</th>
+                <th scope="col" onclick="sortTable(1)">Annotation Count</th>
+                <th scope="col" onclick="sortTable(2)">Line Count</th>
+                <th scope="col" onclick="sortTable(3)">Completion Metric</th>
             </tr>
         </thead>
         <tbody>
         
+            
             
             <tr>
                 <td>
@@ -58,8 +61,11 @@
                     
                 </td>
                 <td>0</td>
+                <td>0</td>
+                <td>1.0</td>
             </tr>
         
+            
             
             <tr>
                 <td>
@@ -69,8 +75,11 @@
                     
                 </td>
                 <td>2</td>
+                <td>36</td>
+                <td>0.05555555555555555</td>
             </tr>
         
+            
             
             <tr>
                 <td>
@@ -80,8 +89,11 @@
                     
                 </td>
                 <td>27</td>
+                <td>279</td>
+                <td>0.0967741935483871</td>
             </tr>
         
+            
             
             <tr>
                 <td>
@@ -91,8 +103,11 @@
                     
                 </td>
                 <td>3</td>
+                <td>83</td>
+                <td>0.03614457831325301</td>
             </tr>
         
+            
             
             <tr>
                 <td>
@@ -102,8 +117,11 @@
                     
                 </td>
                 <td>1</td>
+                <td>17</td>
+                <td>0.058823529411764705</td>
             </tr>
         
+            
             
             <tr>
                 <td>
@@ -113,8 +131,11 @@
                     
                 </td>
                 <td>3</td>
+                <td>46</td>
+                <td>0.06521739130434782</td>
             </tr>
         
+            
             
             <tr>
                 <td>
@@ -124,8 +145,11 @@
                     
                 </td>
                 <td>2</td>
+                <td>17</td>
+                <td>0.11764705882352941</td>
             </tr>
         
+            
             
             <tr>
                 <td>
@@ -135,8 +159,25 @@
                     
                 </td>
                 <td>1</td>
+                <td>64</td>
+                <td>0.015625</td>
             </tr>
         
+            
+            
+            <tr>
+                <td>
+                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/metrics.py" target="_blank">
+                    ./featuremap/metrics.py
+                        </a>
+                    
+                </td>
+                <td>0</td>
+                <td>15</td>
+                <td>0.0</td>
+            </tr>
+        
+            
             
             <tr>
                 <td>
@@ -146,8 +187,11 @@
                     
                 </td>
                 <td>5</td>
+                <td>217</td>
+                <td>0.02304147465437788</td>
             </tr>
         
+            
             
             <tr>
                 <td>
@@ -157,127 +201,176 @@
                     
                 </td>
                 <td>1</td>
+                <td>69</td>
+                <td>0.014492753623188406</td>
             </tr>
         
             
+            
             <tr>
                 <td>
-                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/_footer.html" target="_blank">
-                    ./resources/htmlserialiser/templates/_footer.html
+                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/resources/htmlserialiser/templates/_footer.html" target="_blank">
+                    ./featuremap/resources/htmlserialiser/templates/_footer.html
                         </a>
                     
                 </td>
                 <td>1</td>
+                <td>7</td>
+                <td>0.14285714285714285</td>
             </tr>
         
             
+            
             <tr>
                 <td>
-                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/_header.html" target="_blank">
-                    ./resources/htmlserialiser/templates/_header.html
+                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/resources/htmlserialiser/templates/_header.html" target="_blank">
+                    ./featuremap/resources/htmlserialiser/templates/_header.html
                         </a>
                     
                 </td>
                 <td>2</td>
+                <td>18</td>
+                <td>0.1111111111111111</td>
             </tr>
         
             
+            
             <tr>
                 <td>
-                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/_js_includes.html" target="_blank">
-                    ./resources/htmlserialiser/templates/_js_includes.html
+                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/resources/htmlserialiser/templates/_js_includes.html" target="_blank">
+                    ./featuremap/resources/htmlserialiser/templates/_js_includes.html
                         </a>
                     
                 </td>
                 <td>1</td>
+                <td>2</td>
+                <td>0.5</td>
             </tr>
         
             
+            
             <tr>
                 <td>
-                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/_macros.html" target="_blank">
-                    ./resources/htmlserialiser/templates/_macros.html
+                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/resources/htmlserialiser/templates/_macros.html" target="_blank">
+                    ./featuremap/resources/htmlserialiser/templates/_macros.html
                         </a>
                     
                 </td>
                 <td>0</td>
+                <td>13</td>
+                <td>0.0</td>
             </tr>
         
             
+            
             <tr>
                 <td>
-                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/base.html" target="_blank">
-                    ./resources/htmlserialiser/templates/base.html
+                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/resources/htmlserialiser/templates/base.html" target="_blank">
+                    ./featuremap/resources/htmlserialiser/templates/base.html
                         </a>
                     
                 </td>
                 <td>4</td>
+                <td>33</td>
+                <td>0.12121212121212122</td>
             </tr>
         
             
+            
             <tr>
                 <td>
-                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/entities.html" target="_blank">
-                    ./resources/htmlserialiser/templates/entities.html
+                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/resources/htmlserialiser/templates/entities.html" target="_blank">
+                    ./featuremap/resources/htmlserialiser/templates/entities.html
                         </a>
                     
                 </td>
                 <td>1</td>
+                <td>29</td>
+                <td>0.034482758620689655</td>
             </tr>
         
             
+            
             <tr>
                 <td>
-                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/files.html" target="_blank">
-                    ./resources/htmlserialiser/templates/files.html
+                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/resources/htmlserialiser/templates/files.html" target="_blank">
+                    ./featuremap/resources/htmlserialiser/templates/files.html
                         </a>
                     
                 </td>
                 <td>1</td>
+                <td>101</td>
+                <td>0.009900990099009901</td>
             </tr>
         
             
+            
             <tr>
                 <td>
-                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/no-downstream.html" target="_blank">
-                    ./resources/htmlserialiser/templates/no-downstream.html
+                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/resources/htmlserialiser/templates/no-downstream.html" target="_blank">
+                    ./featuremap/resources/htmlserialiser/templates/no-downstream.html
                         </a>
                     
                 </td>
                 <td>1</td>
+                <td>49</td>
+                <td>0.02040816326530612</td>
             </tr>
         
             
+            
             <tr>
                 <td>
-                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/relationships.html" target="_blank">
-                    ./resources/htmlserialiser/templates/relationships.html
+                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/resources/htmlserialiser/templates/relationships.html" target="_blank">
+                    ./featuremap/resources/htmlserialiser/templates/relationships.html
                         </a>
                     
                 </td>
                 <td>1</td>
+                <td>42</td>
+                <td>0.023809523809523808</td>
             </tr>
         
             
+            
             <tr>
                 <td>
-                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/unexpected-downstream.html" target="_blank">
-                    ./resources/htmlserialiser/templates/unexpected-downstream.html
+                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/resources/htmlserialiser/templates/unexpected-downstream.html" target="_blank">
+                    ./featuremap/resources/htmlserialiser/templates/unexpected-downstream.html
                         </a>
                     
                 </td>
                 <td>1</td>
+                <td>47</td>
+                <td>0.02127659574468085</td>
             </tr>
         
             
+            
             <tr>
                 <td>
-                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./resources/htmlserialiser/templates/unseen-terminals.html" target="_blank">
-                    ./resources/htmlserialiser/templates/unseen-terminals.html
+                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./featuremap/resources/htmlserialiser/templates/unseen-terminals.html" target="_blank">
+                    ./featuremap/resources/htmlserialiser/templates/unseen-terminals.html
                         </a>
                     
                 </td>
                 <td>1</td>
+                <td>35</td>
+                <td>0.02857142857142857</td>
+            </tr>
+        
+            
+            
+            <tr>
+                <td>
+                    <a href="https://github.com/CottageLabs/FeatureMap/tree/main/./MANIFEST.in" target="_blank">
+                    ./MANIFEST.in
+                        </a>
+                    
+                </td>
+                <td>0</td>
+                <td>9</td>
+                <td>0.0</td>
             </tr>
         </tbody>
     </table>
@@ -299,5 +392,61 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
     
+
+<script type="text/javascript">
+var sortableTable = {data: [], rows: []};
+sortableTable.element = document.getElementById("fileList");
+sortableTable.tbody = sortableTable.element.getElementsByTagName("TBODY")[0];
+sortableTable.parsers = [
+    false,
+    parseInt,
+    parseInt,
+    parseFloat
+]
+sortableTable.sorters = {}
+sortableTable.sorters.asc = (n) => {
+    return (a, b) => {
+        return a[n] < b[n] ? -1 : 1
+    }
+}
+sortableTable.sorters.desc = (n) => {
+    return (a, b) => {
+        return a[n] > b[n] ? -1 : 1
+    }
+}
+sortableTable.state = {"by" : -1, "dir" : "asc"};
+
+for (let i = 1; i < (sortableTable.element.rows.length - 1); i++) {
+    let row = sortableTable.element.rows[i].cloneNode(true);
+    let tds = row.getElementsByTagName("TD");
+    let rowData = [i - 1];
+    for (let j = 0; j < tds.length; j++) {
+        let td = tds[j];
+        let val = td.innerText.toLowerCase();
+        if (sortableTable.parsers[j]) {
+            val = sortableTable.parsers[j](val);
+        }
+        rowData.push(val);
+    }
+    sortableTable.rows.push(row);
+    sortableTable.data.push(rowData);
+}
+
+function sortTable(n) {
+    if (sortableTable.state.by === n) {
+        sortableTable.state.dir = sortableTable.state.dir === "desc" ? "asc" : "desc";
+    }
+    sortableTable.state.by = n;
+    n = n + 1;
+    sortableTable.data.sort(sortableTable.sorters[sortableTable.state.dir](n));
+    sortableTable.tbody.textContent = "";
+    for (let i = 0; i < sortableTable.data.length; i++) {
+        let rid = sortableTable.data[i][0];
+        sortableTable.tbody.appendChild(sortableTable.rows[rid]);
+    }
+}
+</script>
+
+
 </body>
 </html>

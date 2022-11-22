@@ -64,7 +64,7 @@ apt install libyaml-dev
 Install the library into your (virtual) environment:
 
 ```
-pip install -r requirements.txt
+pip install -e .
 ```
 
 Go into the `FeatureMap` root directory and run:
