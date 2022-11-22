@@ -20,7 +20,7 @@ class HTMLSerialiser(Serialiser):
     ~~-> Analysis:Model ~~
     ~~-> Jinja2:Tech ~~
     """
-    DEFAULT_TEMPLATE_DIR = rel2abs(__file__, "..", "resources", "htmlserialiser", "templates")
+    DEFAULT_TEMPLATE_DIR = rel2abs(__file__, "resources", "htmlserialiser", "templates")
 
     DEFAULT_TEMPLATES = {
         "relationships": "relationships.html",
