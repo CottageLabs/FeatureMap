@@ -34,17 +34,17 @@ def parse_tree(config, analysis):
             continue
 
         for name in files:
-            path = os.path.join(root, name)
+            path = os.path.relpath(os.path.join(root, name), directory)
             excluded = False
 
             for exclude_pattern in exclude:
-                if fnmatch.fnmatch(path, os.path.join(directory, exclude_pattern)):
+                if fnmatch.fnmatch(path, exclude_pattern):
                     excluded = True
                     break
 
             included = False
             for incf in include:
-                if fnmatch.fnmatch(path, os.path.join(directory, incf)):
+                if fnmatch.fnmatch(path, incf):
                     included = True
 
             if excluded and not included:

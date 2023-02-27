@@ -4,6 +4,7 @@ import csv
 from featuremap.models import Serialiser
 from featuremap import metrics
 
+
 class CSVSerialiser(Serialiser):
     """
     ~~CSV:Serialiser->Serialiser:Serialiser~~

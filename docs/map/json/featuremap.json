@@ -6,20 +6,20 @@
         "->": {
           "Serialiser:Serialiser": [
             {
-              "file": "./featuremap/csvserialiser.py",
-              "line": 9
+              "file": "featuremap/csvserialiser.py",
+              "line": 10
             }
           ],
           "Analysis:Model": [
             {
-              "file": "./featuremap/csvserialiser.py",
-              "line": 10
+              "file": "featuremap/csvserialiser.py",
+              "line": 11
             }
           ],
           "Config:Config": [
             {
-              "file": "./featuremap/csvserialiser.py",
-              "line": 11
+              "file": "featuremap/csvserialiser.py",
+              "line": 12
             }
           ]
         }
@@ -36,19 +36,19 @@
         "->": {
           "Serialiser:Serialiser": [
             {
-              "file": "./featuremap/htmlserialiser.py",
+              "file": "featuremap/htmlserialiser.py",
               "line": 19
             }
           ],
           "Analysis:Model": [
             {
-              "file": "./featuremap/htmlserialiser.py",
+              "file": "featuremap/htmlserialiser.py",
               "line": 20
             }
           ],
           "Jinja2:Tech": [
             {
-              "file": "./featuremap/htmlserialiser.py",
+              "file": "featuremap/htmlserialiser.py",
               "line": 21
             }
           ]
@@ -66,7 +66,7 @@
         "->": {
           "Lark:Tech": [
             {
-              "file": "./featuremap/lex.py",
+              "file": "featuremap/lex.py",
               "line": 1
             }
           ]
@@ -82,7 +82,7 @@
         "->": {
           "Relation:Model": [
             {
-              "file": "./featuremap/models.py",
+              "file": "featuremap/models.py",
               "line": 110
             }
           ]
@@ -98,7 +98,7 @@
         "->": {
           "Analysis:Model": [
             {
-              "file": "./featuremap/models.py",
+              "file": "featuremap/models.py",
               "line": 143
             }
           ]
@@ -114,13 +114,13 @@
         "->": {
           "Serialiser:Serialiser": [
             {
-              "file": "./featuremap/jsonserialiser.py",
+              "file": "featuremap/jsonserialiser.py",
               "line": 8
             }
           ],
           "Analysis:Model": [
             {
-              "file": "./featuremap/jsonserialiser.py",
+              "file": "featuremap/jsonserialiser.py",
               "line": 9
             }
           ]
@@ -137,14 +137,14 @@
         "->": {
           "Config:Config": [
             {
-              "file": "./featuremap/core.py",
-              "line": 20
+              "file": "featuremap/core.py",
+              "line": 21
             }
           ],
           "ParseFile:Core": [
             {
-              "file": "./featuremap/core.py",
-              "line": 53
+              "file": "featuremap/core.py",
+              "line": 54
             }
           ]
         }
@@ -160,52 +160,52 @@
         "->": {
           "Config:Config": [
             {
-              "file": "./featuremap/core.py",
-              "line": 66
+              "file": "featuremap/core.py",
+              "line": 67
             }
           ],
           "Analysis:Model": [
             {
-              "file": "./featuremap/core.py",
-              "line": 74
+              "file": "featuremap/core.py",
+              "line": 75
             }
           ],
           "ParseReference:Core": [
             {
-              "file": "./featuremap/core.py",
-              "line": 91
+              "file": "featuremap/core.py",
+              "line": 92
             }
           ],
           "MapException:Exception": [
             {
-              "file": "./featuremap/core.py",
-              "line": 94
+              "file": "featuremap/core.py",
+              "line": 95
             },
             {
-              "file": "./featuremap/core.py",
-              "line": 125
+              "file": "featuremap/core.py",
+              "line": 126
             },
             {
-              "file": "./featuremap/core.py",
-              "line": 140
+              "file": "featuremap/core.py",
+              "line": 141
             },
             {
-              "file": "./featuremap/core.py",
-              "line": 156
+              "file": "featuremap/core.py",
+              "line": 157
             },
             {
-              "file": "./featuremap/core.py",
-              "line": 163
+              "file": "featuremap/core.py",
+              "line": 164
             },
             {
-              "file": "./featuremap/core.py",
-              "line": 168
+              "file": "featuremap/core.py",
+              "line": 169
             }
           ],
           "ValidateEntity:Core": [
             {
-              "file": "./featuremap/core.py",
-              "line": 122
+              "file": "featuremap/core.py",
+              "line": 123
             }
           ]
         }
@@ -229,8 +229,8 @@
         "->": {
           "MapException:Exception": [
             {
-              "file": "./featuremap/core.py",
-              "line": 194
+              "file": "featuremap/core.py",
+              "line": 195
             }
           ]
         }
@@ -245,14 +245,14 @@
         "->": {
           "Parser:Core": [
             {
-              "file": "./featuremap/core.py",
-              "line": 205
+              "file": "featuremap/core.py",
+              "line": 206
             }
           ],
           "MapException:Exception": [
             {
-              "file": "./featuremap/core.py",
-              "line": 208
+              "file": "featuremap/core.py",
+              "line": 209
             }
           ]
         }
@@ -268,44 +268,44 @@
         "->": {
           "Config:Config": [
             {
-              "file": "./featuremap/core.py",
-              "line": 242
+              "file": "featuremap/core.py",
+              "line": 243
             }
           ],
           "Types:Config": [
             {
-              "file": "./featuremap/core.py",
-              "line": 247
+              "file": "featuremap/core.py",
+              "line": 248
             }
           ],
           "Terminals:Config": [
             {
-              "file": "./featuremap/core.py",
-              "line": 255
+              "file": "featuremap/core.py",
+              "line": 256
             }
           ],
           "Analysis:Model": [
             {
-              "file": "./featuremap/core.py",
-              "line": 262
+              "file": "featuremap/core.py",
+              "line": 263
             }
           ],
           "ParseTree:Core": [
             {
-              "file": "./featuremap/core.py",
-              "line": 266
+              "file": "featuremap/core.py",
+              "line": 267
             }
           ],
           "Serialiser:Serialiser": [
             {
-              "file": "./featuremap/core.py",
-              "line": 269
+              "file": "featuremap/core.py",
+              "line": 270
             }
           ],
           "MapException:Exception": [
             {
-              "file": "./featuremap/core.py",
-              "line": 277
+              "file": "featuremap/core.py",
+              "line": 278
             }
           ]
         }
@@ -326,7 +326,7 @@
         "->": {
           "Runner:Core": [
             {
-              "file": "./featuremap/cli.py",
+              "file": "featuremap/cli.py",
               "line": 32
             }
           ]
@@ -342,7 +342,7 @@
         "->": {
           "Navigation:UIComponent": [
             {
-              "file": "./featuremap/resources/htmlserialiser/templates/_header.html",
+              "file": "featuremap/resources/htmlserialiser/templates/_header.html",
               "line": 7
             }
           ]
@@ -358,7 +358,7 @@
         "->": {
           "Page:Page": [
             {
-              "file": "./featuremap/resources/htmlserialiser/templates/unexpected-downstream.html",
+              "file": "featuremap/resources/htmlserialiser/templates/unexpected-downstream.html",
               "line": 1
             }
           ]
@@ -374,25 +374,25 @@
         "->": {
           "Jinja2:Tech": [
             {
-              "file": "./featuremap/resources/htmlserialiser/templates/base.html",
+              "file": "featuremap/resources/htmlserialiser/templates/base.html",
               "line": 1
             }
           ],
           "HTML:Serialiser": [
             {
-              "file": "./featuremap/resources/htmlserialiser/templates/base.html",
+              "file": "featuremap/resources/htmlserialiser/templates/base.html",
               "line": 2
             }
           ],
           "Header:UIComponent": [
             {
-              "file": "./featuremap/resources/htmlserialiser/templates/base.html",
+              "file": "featuremap/resources/htmlserialiser/templates/base.html",
               "line": 15
             }
           ],
           "Footer:UIComponent": [
             {
-              "file": "./featuremap/resources/htmlserialiser/templates/base.html",
+              "file": "featuremap/resources/htmlserialiser/templates/base.html",
               "line": 26
             }
           ]
@@ -411,7 +411,7 @@
         "->": {
           "Page:Page": [
             {
-              "file": "./featuremap/resources/htmlserialiser/templates/files.html",
+              "file": "featuremap/resources/htmlserialiser/templates/files.html",
               "line": 1
             }
           ]
@@ -427,7 +427,7 @@
         "->": {
           "Page:Page": [
             {
-              "file": "./featuremap/resources/htmlserialiser/templates/no-downstream.html",
+              "file": "featuremap/resources/htmlserialiser/templates/no-downstream.html",
               "line": 1
             }
           ]
@@ -443,7 +443,7 @@
         "->": {
           "Page:Page": [
             {
-              "file": "./featuremap/resources/htmlserialiser/templates/entities.html",
+              "file": "featuremap/resources/htmlserialiser/templates/entities.html",
               "line": 1
             }
           ]
@@ -459,7 +459,7 @@
         "->": {
           "Page:Page": [
             {
-              "file": "./featuremap/resources/htmlserialiser/templates/relationships.html",
+              "file": "featuremap/resources/htmlserialiser/templates/relationships.html",
               "line": 1
             }
           ]
@@ -475,7 +475,7 @@
         "->": {
           "Page:Page": [
             {
-              "file": "./featuremap/resources/htmlserialiser/templates/unseen-terminals.html",
+              "file": "featuremap/resources/htmlserialiser/templates/unseen-terminals.html",
               "line": 1
             }
           ]
@@ -487,95 +487,95 @@
     }
   },
   "files": {
-    "./MANIFEST.in": {
+    "MANIFEST.in": {
       "annotations": 0,
-      "total_lines": 9
+      "total_lines": 6
     },
-    "./featuremap/plugin.py": {
+    "featuremap/plugin.py": {
       "annotations": 1,
       "total_lines": 69
     },
-    "./featuremap/csvserialiser.py": {
+    "featuremap/csvserialiser.py": {
       "annotations": 3,
-      "total_lines": 83
+      "total_lines": 84
     },
-    "./featuremap/htmlserialiser.py": {
+    "featuremap/htmlserialiser.py": {
       "annotations": 3,
       "total_lines": 46
     },
-    "./featuremap/lex.py": {
+    "featuremap/lex.py": {
       "annotations": 1,
       "total_lines": 64
     },
-    "./featuremap/models.py": {
+    "featuremap/models.py": {
       "annotations": 5,
       "total_lines": 217
     },
-    "./featuremap/jsonserialiser.py": {
+    "featuremap/jsonserialiser.py": {
       "annotations": 2,
       "total_lines": 17
     },
-    "./featuremap/exceptions.py": {
+    "featuremap/exceptions.py": {
       "annotations": 1,
       "total_lines": 17
     },
-    "./featuremap/core.py": {
+    "featuremap/core.py": {
       "annotations": 27,
-      "total_lines": 279
+      "total_lines": 280
     },
-    "./featuremap/__init__.py": {
+    "featuremap/__init__.py": {
       "annotations": 0,
       "total_lines": 0
     },
-    "./featuremap/cli.py": {
+    "featuremap/cli.py": {
       "annotations": 2,
       "total_lines": 36
     },
-    "./featuremap/metrics.py": {
+    "featuremap/metrics.py": {
       "annotations": 0,
       "total_lines": 15
     },
-    "./featuremap/resources/htmlserialiser/templates/_header.html": {
+    "featuremap/resources/htmlserialiser/templates/_header.html": {
       "annotations": 2,
       "total_lines": 18
     },
-    "./featuremap/resources/htmlserialiser/templates/_footer.html": {
+    "featuremap/resources/htmlserialiser/templates/_footer.html": {
       "annotations": 1,
       "total_lines": 7
     },
-    "./featuremap/resources/htmlserialiser/templates/unexpected-downstream.html": {
+    "featuremap/resources/htmlserialiser/templates/unexpected-downstream.html": {
       "annotations": 1,
       "total_lines": 47
     },
-    "./featuremap/resources/htmlserialiser/templates/base.html": {
+    "featuremap/resources/htmlserialiser/templates/base.html": {
       "annotations": 4,
       "total_lines": 33
     },
-    "./featuremap/resources/htmlserialiser/templates/files.html": {
+    "featuremap/resources/htmlserialiser/templates/files.html": {
       "annotations": 1,
       "total_lines": 101
     },
-    "./featuremap/resources/htmlserialiser/templates/no-downstream.html": {
+    "featuremap/resources/htmlserialiser/templates/no-downstream.html": {
       "annotations": 1,
       "total_lines": 49
     },
-    "./featuremap/resources/htmlserialiser/templates/_js_includes.html": {
+    "featuremap/resources/htmlserialiser/templates/_js_includes.html": {
       "annotations": 1,
       "total_lines": 2
     },
-    "./featuremap/resources/htmlserialiser/templates/_macros.html": {
+    "featuremap/resources/htmlserialiser/templates/_macros.html": {
       "annotations": 0,
       "total_lines": 13
     },
-    "./featuremap/resources/htmlserialiser/templates/entities.html": {
+    "featuremap/resources/htmlserialiser/templates/entities.html": {
       "annotations": 1,
       "total_lines": 29
     },
-    "./featuremap/resources/htmlserialiser/templates/relationships.html": {
+    "featuremap/resources/htmlserialiser/templates/relationships.html": {
       "annotations": 1,
       "total_lines": 42
     },
-    "./featuremap/resources/htmlserialiser/templates/unseen-terminals.html": {
+    "featuremap/resources/htmlserialiser/templates/unseen-terminals.html": {
       "annotations": 1,
       "total_lines": 35
     }
@@ -583,193 +583,193 @@
   "entities": {
     "Plugin:Core": [
       {
-        "file": "./featuremap/plugin.py",
+        "file": "featuremap/plugin.py",
         "line": 2
       }
     ],
     "CSV:Serialiser": [
       {
-        "file": "./featuremap/csvserialiser.py",
-        "line": 9
+        "file": "featuremap/csvserialiser.py",
+        "line": 10
       }
     ],
     "HTML:Serialiser": [
       {
-        "file": "./featuremap/htmlserialiser.py",
+        "file": "featuremap/htmlserialiser.py",
         "line": 19
       }
     ],
     "Parser:Core": [
       {
-        "file": "./featuremap/lex.py",
+        "file": "featuremap/lex.py",
         "line": 1
       }
     ],
     "Analysis:Model": [
       {
-        "file": "./featuremap/models.py",
+        "file": "featuremap/models.py",
         "line": 5
       }
     ],
     "Relation:Model": [
       {
-        "file": "./featuremap/models.py",
+        "file": "featuremap/models.py",
         "line": 140
       }
     ],
     "Serialiser:Serialiser": [
       {
-        "file": "./featuremap/models.py",
+        "file": "featuremap/models.py",
         "line": 202
       }
     ],
     "JSON:Serialiser": [
       {
-        "file": "./featuremap/jsonserialiser.py",
+        "file": "featuremap/jsonserialiser.py",
         "line": 8
       }
     ],
     "MapException:Exception": [
       {
-        "file": "./featuremap/exceptions.py",
+        "file": "featuremap/exceptions.py",
         "line": 3
       }
     ],
     "ParseTree:Core": [
       {
-        "file": "./featuremap/core.py",
-        "line": 14
+        "file": "featuremap/core.py",
+        "line": 15
       }
     ],
     "Config:Config": [
       {
-        "file": "./featuremap/core.py",
-        "line": 20
+        "file": "featuremap/core.py",
+        "line": 21
       }
     ],
     "ParseFile:Core": [
       {
-        "file": "./featuremap/core.py",
-        "line": 59
+        "file": "featuremap/core.py",
+        "line": 60
       }
     ],
     "ValidateEntity:Core": [
       {
-        "file": "./featuremap/core.py",
-        "line": 182
+        "file": "featuremap/core.py",
+        "line": 183
       }
     ],
     "ParseReference:Core": [
       {
-        "file": "./featuremap/core.py",
-        "line": 200
+        "file": "featuremap/core.py",
+        "line": 201
       }
     ],
     "Runner:Core": [
       {
-        "file": "./featuremap/core.py",
-        "line": 237
+        "file": "featuremap/core.py",
+        "line": 238
       }
     ],
     "CLI:Entrypoint": [
       {
-        "file": "./featuremap/cli.py",
+        "file": "featuremap/cli.py",
         "line": 8
       }
     ],
     "Header:UIComponent": [
       {
-        "file": "./featuremap/resources/htmlserialiser/templates/_header.html",
+        "file": "featuremap/resources/htmlserialiser/templates/_header.html",
         "line": 1
       }
     ],
     "Footer:UIComponent": [
       {
-        "file": "./featuremap/resources/htmlserialiser/templates/_footer.html",
+        "file": "featuremap/resources/htmlserialiser/templates/_footer.html",
         "line": 1
       }
     ],
     "UnexpectedDownstream:Page": [
       {
-        "file": "./featuremap/resources/htmlserialiser/templates/unexpected-downstream.html",
+        "file": "featuremap/resources/htmlserialiser/templates/unexpected-downstream.html",
         "line": 1
       }
     ],
     "Page:Page": [
       {
-        "file": "./featuremap/resources/htmlserialiser/templates/base.html",
+        "file": "featuremap/resources/htmlserialiser/templates/base.html",
         "line": 1
       }
     ],
     "Files:Page": [
       {
-        "file": "./featuremap/resources/htmlserialiser/templates/files.html",
+        "file": "featuremap/resources/htmlserialiser/templates/files.html",
         "line": 1
       }
     ],
     "NoDownstream:Page": [
       {
-        "file": "./featuremap/resources/htmlserialiser/templates/no-downstream.html",
+        "file": "featuremap/resources/htmlserialiser/templates/no-downstream.html",
         "line": 1
       }
     ],
     "JSIncludes:UIComponent": [
       {
-        "file": "./featuremap/resources/htmlserialiser/templates/_js_includes.html",
+        "file": "featuremap/resources/htmlserialiser/templates/_js_includes.html",
         "line": 1
       }
     ],
     "Entities:Page": [
       {
-        "file": "./featuremap/resources/htmlserialiser/templates/entities.html",
+        "file": "featuremap/resources/htmlserialiser/templates/entities.html",
         "line": 1
       }
     ],
     "Relationships:Page": [
       {
-        "file": "./featuremap/resources/htmlserialiser/templates/relationships.html",
+        "file": "featuremap/resources/htmlserialiser/templates/relationships.html",
         "line": 1
       }
     ],
     "UnseenTerminals:Page": [
       {
-        "file": "./featuremap/resources/htmlserialiser/templates/unseen-terminals.html",
+        "file": "featuremap/resources/htmlserialiser/templates/unseen-terminals.html",
         "line": 1
       }
     ]
   },
   "targets": [
-    "CSV:Serialiser",
-    "Lark:Tech",
-    "Jinja2:Tech",
-    "Plugin:Core",
-    "Relation:Model",
-    "Page:Page",
-    "UnexpectedDownstream:Page",
-    "Files:Page",
-    "Serialiser:Serialiser",
-    "JSON:Serialiser",
-    "Parser:Core",
-    "Footer:UIComponent",
-    "Analysis:Model",
-    "Entities:Page",
-    "Navigation:UIComponent",
-    "NoDownstream:Page",
-    "Runner:Core",
     "Types:Config",
-    "CLI:Entrypoint",
-    "JSIncludes:UIComponent",
-    "ValidateEntity:Core",
-    "Terminals:Config",
-    "ParseReference:Core",
-    "HTML:Serialiser",
-    "Header:UIComponent",
-    "MapException:Exception",
-    "ParseTree:Core",
     "ParseFile:Core",
-    "UnseenTerminals:Page",
+    "Navigation:UIComponent",
+    "Terminals:Config",
+    "CLI:Entrypoint",
+    "Relationships:Page",
+    "Plugin:Core",
+    "UnexpectedDownstream:Page",
+    "Serialiser:Serialiser",
+    "ParseTree:Core",
+    "HTML:Serialiser",
+    "Analysis:Model",
+    "NoDownstream:Page",
+    "Entities:Page",
+    "ValidateEntity:Core",
+    "JSIncludes:UIComponent",
+    "Jinja2:Tech",
+    "Lark:Tech",
+    "ParseReference:Core",
+    "MapException:Exception",
+    "Files:Page",
+    "JSON:Serialiser",
+    "Relation:Model",
+    "Header:UIComponent",
     "Config:Config",
-    "Relationships:Page"
+    "Footer:UIComponent",
+    "Page:Page",
+    "Parser:Core",
+    "CSV:Serialiser",
+    "UnseenTerminals:Page",
+    "Runner:Core"
   ],
   "terminals": [
     "MapException:Exception",
