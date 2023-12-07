@@ -9,7 +9,7 @@ setup(
     install_requires=[
         "jinja2<3.1.0",
         "lark==0.11.1",
-        "pyyaml==5.4.1",
+        "pyyaml==6.0.1",
         "MarkupSafe==2.0.1"
     ],
     url='https://cottagelabs.com/',
