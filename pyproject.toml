@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "featuremap"
+requires-python = ">=3.8.0"
+version = "0.1.5"
+description = "For annotating text files with features and their connections to other features."
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    { name = "Cottage Labs", email = "richard@cottagelabs.com" },
+]
+dependencies = [
+    "Jinja2 ~= 3.1.4",
+    "lark ~= 1.2.2",
+    "MarkupSafe ~= 2.1.5",
+    "pyyaml ~= 6.0.2",
+]
+
+[project.scripts]
+featuremap = "featuremap.cli:main"
+
+[project.urls]
+Homepage = "https://cottagelabs.com/"

@@ -12,12 +12,14 @@ exclude:
   - ".gitignore"
   - "requirements.txt"
   - "setup.py"
+  - "pyproject.toml"
   - "LICENSE"
 exclude_dirs:
   - .featuremap
   - .git
   - .idea
   - example
+  - venv
   - docs/map
   - featuremap.egg-info
 #include: # No need for any overrides to the exclude directive
